@@ -1,0 +1,78 @@
+:host {
+  display: block;
+  margin-top: calc(var(--ds-content-spacing, 2rem) * -1);
+
+  .background-image-container {
+    color: white;
+    position: relative;
+
+    .background-image {
+      position: relative; // ensures child absolute positioning works
+
+      > img {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+        /* Optionally, add a fallback background color */
+        /* background-color: var(--bs-info, #17a2b8); */
+      }
+    }
+
+    .container {
+      position: relative;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+
+      &:before,
+      &:after {
+        content: '';
+        display: block;
+        width: var(--ds-banner-background-gradient-width, 80px);
+        height: 100%;
+        top: 0;
+        position: absolute;
+      }
+
+      &:before {
+        // background: linear-gradient(to left, var(--ds-banner-text-background), transparent);
+        left: calc(-1 * var(--ds-banner-background-gradient-width, 80px));
+      }
+
+      &:after {
+        // background: linear-gradient(to right, var(--ds-banner-text-background), transparent);
+        right: calc(-1 * var(--ds-banner-background-gradient-width, 80px));
+      }
+
+      /* background-color: var(--ds-banner-text-background); */
+    }
+
+    small.credits {
+      a {
+        color: inherit;
+      }
+
+      opacity: 0.3;
+      position: absolute;
+      right: var(--bs-spacer, 1rem);
+      bottom: 0;
+    }
+  }
+
+  .jumbotron {
+    background-color: transparent;
+  }
+
+  a {
+    color: var(--ds-home-news-link-color, #007bff);
+
+    &:hover,
+    &:focus {
+      color: var(--ds-home-news-link-hover-color, #0056b3);
+    }
+  }
+}
+

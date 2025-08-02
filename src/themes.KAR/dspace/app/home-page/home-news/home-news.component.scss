@@ -1,0 +1,47 @@
+.banner-carousel {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background-color: #000; // fallback if image doesn't fill space
+
+  img {
+    width: 100%;
+    height: auto; // preserve aspect ratio
+    display: none;
+    position: relative;
+    transition: opacity 1s ease-in-out;
+  }
+
+  img.active {
+    display: block;
+    z-index: 1;
+  }
+
+  button.prev,
+  button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.4);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    padding: 0.3em 0.6em;
+    cursor: pointer;
+    z-index: 3;
+    border-radius: 4px;
+  }
+
+  button.prev {
+    left: 10px;
+  }
+
+  button.next {
+    right: 10px;
+  }
+
+  button:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+}
+

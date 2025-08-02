@@ -1,0 +1,10 @@
+<div class="banner-carousel">
+  <img *ngFor="let banner of banners; let i = index"
+       [src]="'assets/dspace/images/' + banner"
+       [class.active]="i === currentIndex"
+       alt="Banner" />
+
+  <button class="prev" (click)="showPrevious()">‹</button>
+  <button class="next" (click)="showNext()">›</button>
+</div>
+
