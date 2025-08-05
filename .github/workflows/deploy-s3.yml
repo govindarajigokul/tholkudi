@@ -1,0 +1,85 @@
+name: Deploy to AWS S3
+
+# Trigger the workflow ONLY on push to deployment branch
+on:
+  push:
+    branches: [ deployment ]
+
+# Environment variables
+env:
+  AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
+  AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+  AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+  AWS_REGION: ${{ secrets.AWS_REGION }}
+  SOURCE_DIR: dist/browser
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    # Checkout the repository code
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    # Setup Node.js environment
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+
+    # Install dependencies
+    - name: Install dependencies
+      run: npm ci
+
+    # Build the Angular application
+    - name: Build Angular app
+      run: npx ng build --configuration production
+
+    # Verify build output
+    - name: Verify build output
+      run: |
+        echo "Checking build output..."
+        ls -la dist/
+        ls -la dist/browser/
+        echo "Build verification complete"
+
+    # Configure AWS credentials
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v4
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: ${{ secrets.AWS_REGION }}
+
+    # Deploy to S3 bucket
+    - name: Deploy to S3
+      run: |
+        echo "Deploying to S3 bucket: $AWS_S3_BUCKET"
+        aws s3 sync $SOURCE_DIR s3://$AWS_S3_BUCKET --delete --exact-timestamps
+        echo "Deployment complete!"
+
+    # Configure S3 bucket for static website hosting
+    - name: Configure S3 website
+      run: |
+        echo "Configuring S3 bucket for static website hosting..."
+        aws s3 website s3://$AWS_S3_BUCKET --index-document index.html --error-document index.html
+        echo "S3 website configuration complete!"
+
+    # Invalidate CloudFront cache (optional - if you have CloudFront)
+    - name: Invalidate CloudFront
+      if: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
+      run: |
+        echo "Invalidating CloudFront distribution..."
+        aws cloudfront create-invalidation --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} --paths "/*"
+        echo "CloudFront invalidation complete!"
+
+    # Output the website URL
+    - name: Output website URL
+      run: |
+        echo "🚀 Deployment successful!"
+        echo "Your website is available at:"
+        echo "http://$AWS_S3_BUCKET.s3-website-$AWS_REGION.amazonaws.com"
+        echo ""
+        echo "Note: It may take a few minutes for changes to be visible."
