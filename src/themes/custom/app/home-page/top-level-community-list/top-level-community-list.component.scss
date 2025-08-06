@@ -8,18 +8,18 @@
 
 .tribal-archive-title {
   font-family: 'Akhand-Bold', Arial, sans-serif;
-  font-size: 1.75rem; // h3 size
+  font-size: 2.2rem; // Increased font size
   font-weight: bold;
   text-align: center;
-  color: white;
-  background-color: #6c2c34; // Updated background color as requested
-  padding: 12px 30px;
+  color: rgba(255, 255, 255, 0.9); // Semi-transparent white
+  background-color: #6c2c34;
+  padding: 8px 20px; // Reduced padding
   border-radius: 25px;
   margin: 20px auto;
   display: block;
   width: fit-content;
-  border: 3px solid #fff4ec; // White border as requested
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); // Enhanced shadow downside
+  border: 3px solid #fff4ec;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
   letter-spacing: 0.5px;
 }
 
