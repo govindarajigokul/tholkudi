@@ -37,7 +37,7 @@ import {
   NativeWindowRef,
   NativeWindowService,
 } from '../core/services/window.service';
-import { ThemedFooterComponent } from '../footer/themed-footer.component';
+import { ThemedFooterComponent } from '../footer.KAR/themed-footer.component';
 import { ThemedHeaderNavbarWrapperComponent } from '../header-nav-wrapper/themed-header-navbar-wrapper.component';
 import { slideSidebarPadding } from '../shared/animations/slide';
 import { HostWindowService } from '../shared/host-window.service';

@@ -19,7 +19,8 @@ export class ThemedFooterComponent extends ThemedComponent<FooterComponent> {
   }
 
   protected importThemedComponent(themeName: string): Promise<any> {
-    return import(`../../themes/${themeName}/app/footer/footer.component`);
+    // Always use the KAR footer regardless of theme
+    return import('./footer.component');
   }
 
   protected importUnthemedComponent(): Promise<any> {

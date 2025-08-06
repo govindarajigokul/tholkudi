@@ -1,91 +1,167 @@
 :host {
   footer {
-    background-color: var(--ds-footer-bg);
+    background-color: #f4e9d4;
+    color: #333;
     z-index: var(--ds-footer-z-index);
-    border-top: var(--ds-footer-border);
-    padding: var(--ds-footer-padding);
+    border-top: 1px solid #ddd;
+    padding: 2rem 0 1rem 0;
 
-    h5 {
-      font-size: 1rem;
-      font-weight: 600;
-      margin-bottom: 0.75rem;
-      text-align: center; // All headings centered
+    .container {
+      max-width: 1200px;
     }
 
+    // Logo column styling
+    .logo-column {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .logo-placeholder {
+        width: 80px;
+        height: 60px;
+        background-color: #ddd;
+        border: 2px dashed #999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.8rem;
+        color: #666;
+        text-align: center;
+        border-radius: 4px;
+      }
+    }
+
+    // Column headings
+    h5 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: #8B4513;
+      text-align: left;
+    }
+
+    // Content styling
     address,
     ul,
     li,
     p {
       font-size: 0.9rem;
-      line-height: 1.5;
-      text-align: left; // Default: left-align all content
+      line-height: 1.6;
+      color: #333;
+      margin-bottom: 0.3rem;
     }
 
-    // Right-align only the last .col-md-4 (Column 3)
-    .row > .col-md-4:last-child {
-      address,
-      ul,
-      li,
-      p {
-        text-align: right;
-      }
+    address {
+      font-style: normal;
+      margin-bottom: 0;
     }
 
+    // Links styling
     a {
-      color: inherit;
+      color: #333;
       text-decoration: none;
+      transition: color 0.2s ease;
 
       &:hover,
       &:focus {
-        text-decoration: underline;
+        color: #8B4513;
+        text-decoration: none;
       }
 
       &:focus-visible {
-        outline: 2px dashed rgba(255, 255, 255, 0.5);
+        outline: 2px solid #8B4513;
         outline-offset: 2px;
       }
     }
 
-    .top-footer {
-      background-color: var(--ds-top-footer-bg);
-      padding: var(--ds-footer-padding);
-      margin: calc(var(--ds-footer-padding) * -1) 0 var(--ds-footer-padding) 0;
+    // Lists
+    ul {
+      padding-left: 0;
+      list-style: none;
+      margin-bottom: 0;
 
-      ul {
-        padding-left: 0;
-        list-style: none;
+      li {
+        margin-bottom: 0.4rem;
 
-        li {
-          margin-bottom: 0.5rem;
+        &:last-child {
+          margin-bottom: 0;
         }
-      }
-
-      .col-md-4 {
-        margin-bottom: 1rem;
       }
     }
 
+    // Social icons styling
+    .social-icons {
+      display: flex;
+      gap: 0.8rem;
+      margin-top: 0.5rem;
+
+      a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        background-color: #333;
+        color: white;
+        border-radius: 4px;
+        font-size: 1.2rem;
+        transition: background-color 0.2s ease;
+
+        &:hover {
+          background-color: #8B4513;
+          color: white;
+        }
+
+        &.facebook {
+          background-color: #1877f2;
+          &:hover { background-color: #166fe5; }
+        }
+
+        &.youtube {
+          background-color: #ff0000;
+          &:hover { background-color: #cc0000; }
+        }
+
+        &.twitter {
+          background-color: #1da1f2;
+          &:hover { background-color: #0d8bd9; }
+        }
+      }
+    }
+
+    // Bottom copyright section
     .bottom-footer {
-      background-color: #4e342e;
-      color: #fff;
+      background-color: #f4e9d4;
+      color: #666;
       font-size: 0.85rem;
-      padding: 0.6rem 1rem;
+      padding: 1rem 0 0.5rem 0;
       text-align: center;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      border-top: 1px solid #ddd;
+      margin-top: 1.5rem;
+    }
 
-      .notify-enabled {
-        position: relative;
-        margin-top: 1rem;
+    // Responsive adjustments
+    @media (max-width: 767.98px) {
+      padding: 1.5rem 0 1rem 0;
 
-        .coar-notify-support-route {
-          padding: 0 0.5rem;
-          color: inherit;
-        }
+      .logo-column {
+        margin-bottom: 1.5rem;
+      }
 
-        .n-coar {
-          height: var(--ds-footer-n-coar-height);
-          margin-bottom: 8.5px;
-        }
+      h5 {
+        text-align: center;
+        margin-bottom: 0.8rem;
+      }
+
+      address,
+      ul,
+      li,
+      p {
+        text-align: center;
+      }
+
+      .social-icons {
+        justify-content: center;
       }
     }
   }
