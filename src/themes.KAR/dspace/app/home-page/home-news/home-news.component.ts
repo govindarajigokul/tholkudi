@@ -10,10 +10,9 @@ import { CommonModule } from '@angular/common';
 })
 export class HomeNewsComponent implements OnInit, OnDestroy {
   banners: string[] = [
-    'banner1.jpg',
-    'banner2.jpg',
-    'banner3.jpg',
-    'banner4.jpg'
+    'hero-banner-01.jpg',
+    'hero-banner-02.jpg',
+    'hero-banner-03.jpg'
   ];
   currentIndex = 0;
   intervalId: any;
@@ -29,7 +28,7 @@ export class HomeNewsComponent implements OnInit, OnDestroy {
   }
 
   startAutoSlide(): void {
-    this.intervalId = setInterval(() => this.showNext(), 5000);
+    this.intervalId = setInterval(() => this.showNext(), 7000); // 7 seconds as requested
   }
 
   showNext(): void {
