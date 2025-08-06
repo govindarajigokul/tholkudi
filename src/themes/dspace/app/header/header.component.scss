@@ -17,11 +17,177 @@
     height: var(--ds-header-logo-height);
   }
 
+  // Header right section layout
+  #header-right {
+    ds-search-navbar {
+      margin-right: 16px;
+    }
+
+    // Ensure proper spacing between elements
+    gap: 12px;
+  }
+
   button#navbar-toggler {
     color: var(--ds-header-icon-color);
 
     &:hover, &:focus {
       color: var(--ds-header-icon-color-hover);
+    }
+  }
+
+  // Custom styling for navigation buttons to match screenshot
+  #desktop-navbar {
+    ::ng-deep {
+      .ds-menu-item-wrapper {
+        margin-right: 12px;
+
+        .ds-menu-item, .ds-menu-toggler-wrapper {
+          background-color: #4a6fa5; // Blue background to match screenshot
+          color: white !important;
+          border-radius: 20px;
+          padding: 10px 18px !important;
+          text-decoration: none;
+          font-weight: 500;
+          border: none;
+          font-size: 14px;
+          display: inline-flex;
+          align-items: center;
+          min-height: 40px;
+
+          &:hover, &:focus {
+            background-color: #3a5a95;
+            color: white !important;
+            text-decoration: none;
+          }
+        }
+
+        // Dropdown arrow styling
+        .dropdown-toggle::after {
+          color: white;
+          margin-left: 8px;
+          border-top-color: white;
+        }
+
+        // Dropdown menu styling
+        .dropdown-menu {
+          border-radius: 8px;
+          border: none;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+          margin-top: 8px;
+
+          .ds-menu-item {
+            background: white;
+            color: #333 !important;
+            border-radius: 0;
+            padding: 8px 16px !important;
+
+            &:hover, &:focus {
+              background-color: #f8f9fa;
+              color: #333 !important;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Navigation buttons section styling
+  .nav-buttons-section {
+    .nav-button-wrapper {
+      .nav-button {
+        background-color: #4a6fa5; // Blue background to match screenshot
+        color: white !important;
+        border: none;
+        border-radius: 20px;
+        padding: 10px 18px;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 14px;
+        display: inline-flex;
+        align-items: center;
+        min-height: 40px;
+        white-space: nowrap;
+
+        &:hover, &:focus {
+          background-color: #3a5a95;
+          color: white !important;
+          text-decoration: none;
+        }
+
+        // Special styling for login-language combined button
+        &.login-lang-button {
+          .lang-text {
+            font-size: 12px;
+            opacity: 0.9;
+          }
+        }
+
+        i {
+          font-size: 12px;
+        }
+      }
+    }
+
+    // Dropdown menus
+    ::ng-deep {
+      .dropdown-menu {
+        border-radius: 8px;
+        border: none;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        margin-top: 8px;
+        min-width: 250px;
+
+        .dropdown-item {
+          padding: 8px 16px;
+          color: #333;
+
+          &:hover, &:focus {
+            background-color: #f8f9fa;
+            color: #333;
+          }
+
+          &.active {
+            background-color: #4a6fa5;
+            color: white;
+          }
+        }
+
+        .dropdown-header {
+          color: #6c757d;
+          font-weight: 600;
+          font-size: 12px;
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+          padding: 8px 16px 4px;
+        }
+
+        .dropdown-divider {
+          margin: 8px 0;
+        }
+
+        // Login form styling within dropdown
+        .login-dropdown-section {
+          ds-log-in {
+            ::ng-deep {
+              .card {
+                border: none;
+                box-shadow: none;
+                background: transparent;
+              }
+
+              .btn-primary {
+                background-color: #4a6fa5;
+                border-color: #4a6fa5;
+
+                &:hover {
+                  background-color: #3a5a95;
+                  border-color: #3a5a95;
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 
