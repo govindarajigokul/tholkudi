@@ -11,13 +11,13 @@ header {
     height: 40px;
   }
 
-  // Navigation buttons styling to match the expected design
+  // Navigation buttons styling with new color #2b4878
   .nav-button {
-    background-color: #4a6fa5; // Blue background
+    background-color: #2b4878; // New background color as requested
     color: white !important;
     text-decoration: none;
     padding: 8px 16px;
-    border-radius: 20px;
+    border-radius: 20px; // Same border radius as existing
     font-size: 14px;
     font-weight: 500;
     display: inline-flex;
@@ -27,7 +27,7 @@ header {
     cursor: pointer;
 
     &:hover, &:focus {
-      background-color: #3a5a95; // Darker blue on hover
+      background-color: #1e3456; // Darker shade for hover
       color: white !important;
       text-decoration: none;
     }
@@ -36,6 +36,54 @@ header {
     .fa-chevron-down {
       font-size: 12px;
       margin-left: 8px;
+    }
+  }
+
+  // User controls wrapper styling with #229daf background
+  .user-controls-wrapper {
+    background-color: #229daf; // New background color as requested
+    border-radius: 20px; // Same border radius as navigation buttons
+    padding: 4px 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    // No hover styles as requested
+
+    // Style the login text to have white background
+    ::ng-deep ds-auth-nav-menu {
+      .btn, .dropdown-toggle, a {
+        background-color: white !important;
+        color: #333 !important;
+        border-radius: 16px !important; // Slightly smaller radius for inner element
+        padding: 4px 12px !important;
+        border: none !important;
+        font-size: 14px !important;
+
+        // No hover styles as requested
+        &:hover, &:focus {
+          background-color: white !important;
+          color: #333 !important;
+          text-decoration: none !important;
+        }
+      }
+    }
+
+    // Style language switcher to blend with the background
+    ::ng-deep ds-lang-switch {
+      .btn, .dropdown-toggle, a {
+        background-color: transparent !important;
+        color: white !important;
+        border: none !important;
+        font-size: 14px !important;
+
+        // No hover styles as requested
+        &:hover, &:focus {
+          background-color: transparent !important;
+          color: white !important;
+          text-decoration: none !important;
+        }
+      }
     }
   }
 
@@ -53,7 +101,7 @@ header {
 
       &:hover, &:focus {
         background-color: #f8f9fa;
-        color: #4a6fa5;
+        color: #2b4878; // Updated to match new button color
       }
     }
   }
