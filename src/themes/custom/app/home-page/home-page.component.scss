@@ -39,7 +39,7 @@
 // Browse Categories Section
 .browse-categories-section {
   background-color: transparent; // Let the main background show through
-  padding: 3rem 0 2rem 0;
+  padding: 3rem 0 0.5rem 0; // Reduced bottom padding from 2rem to 0.5rem
 
   .browse-categories {
     display: flex;
