@@ -10,6 +10,10 @@
 
     &-container {
       min-height: var(--ds-header-height);
+      width: 100%;
+      max-width: 100%;
+      padding-left: 20px;
+      padding-right: 0;
     }
   }
 
@@ -19,12 +23,20 @@
 
   // Header right section layout
   #header-right {
+    margin-left: auto;
+    margin-right: 0;
+    padding-right: 20px;
+
     ds-search-navbar {
       margin-right: 16px;
     }
 
     // Ensure proper spacing between elements
     gap: 12px;
+
+    // Push everything to the far right
+    justify-content: flex-end !important;
+    flex-shrink: 0;
   }
 
   button#navbar-toggler {
@@ -93,6 +105,12 @@
 
   // Navigation buttons section styling
   .nav-buttons-section {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: auto;
+    flex-shrink: 0;
+
     .nav-button-wrapper {
       .nav-button {
         background-color: #4a6fa5; // Blue background to match screenshot
