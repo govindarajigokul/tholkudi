@@ -100,20 +100,6 @@ export const ROUTES: Route[] = [
         ],
       },
     ],
-    data: {
-      menu: {
-        public: [{
-          id: 'statistics_community_:id',
-          active: true,
-          visible: true,
-          index: 2,
-          model: {
-            type: MenuItemType.LINK,
-            text: 'menu.section.statistics',
-            link: 'statistics/communities/:id/',
-          } as LinkMenuItemModel,
-        }],
-      },
-    },
+
   },
 ];

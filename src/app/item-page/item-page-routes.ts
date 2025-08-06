@@ -65,21 +65,7 @@ export const ROUTES: Route[] = [
         canActivate: [authenticatedGuard, orcidPageGuard],
       },
     ],
-    data: {
-      menu: {
-        public: [{
-          id: 'statistics_item_:id',
-          active: true,
-          visible: true,
-          index: 2,
-          model: {
-            type: MenuItemType.LINK,
-            text: 'menu.section.statistics',
-            link: 'statistics/items/:id/',
-          } as LinkMenuItemModel,
-        }],
-      },
-    },
+
   },
   {
     path: 'version',
