@@ -8,26 +8,28 @@
 
 .tribal-archive-title {
   font-family: 'Akhand-Bold', Arial, sans-serif;
-  font-size: 2.2rem; // Increased font size
+  font-size: 1.9rem; // Slightly reduced font size
   font-weight: bold;
   text-align: center;
-  color: rgba(255, 255, 255, 0.9); // Semi-transparent white
+  color: rgba(255, 255, 255, 0.9);
   background-color: #6c2c34;
-  padding: 8px 20px; // Reduced padding
+  padding: 6px 18px; // Further reduced padding for better proportion
   border-radius: 25px;
-  margin: 20px auto;
+  margin: 0; // Remove default margin
   display: block;
   width: fit-content;
   border: 3px solid #fff4ec;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
   letter-spacing: 0.5px;
+  line-height: 1.2; // Better line height for vertical centering
 }
 
-// Ensure the container centers the title properly
+// Ensure the container centers the title properly with vertical spacing
 .tribal-archive-container {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   text-align: center;
+  margin: 15px 0; // Add controlled vertical spacing
 }
