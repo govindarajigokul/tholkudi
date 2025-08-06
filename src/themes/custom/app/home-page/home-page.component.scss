@@ -3,6 +3,21 @@
   background-color: #f8f4ec;
 }
 
+// Golden borders
+.top-border {
+  height: 4px;
+  background-color: #6c2c34;
+  width: 100%;
+  margin: 0;
+}
+
+.bottom-border {
+  height: 4px;
+  background-color: #6c2c34;
+  width: 100%;
+  margin: 0;
+}
+
 // Main background section (between carousel and footer)
 .main-background-section {
   background-image: url('/assets/images/main-background.jpg');
