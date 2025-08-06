@@ -20,12 +20,10 @@ import { ViewTrackerComponent } from '../../../../app/statistics/angulartics/dsp
 
 @Component({
   selector: 'ds-themed-home-page',
-  // styleUrls: ['./home-page.component.scss'],
-  styleUrls: ['../../../../app/home-page/home-page.component.scss'],
-  // templateUrl: './home-page.component.html'
-  templateUrl: '../../../../app/home-page/home-page.component.html',
+  styleUrls: ['./home-page.component.scss'],
+  templateUrl: './home-page.component.html',
   standalone: true,
-  imports: [ThemedHomeNewsComponent, NgTemplateOutlet, NgIf, ViewTrackerComponent, ThemedSearchFormComponent, ThemedTopLevelCommunityListComponent, RecentItemListComponent, AsyncPipe, TranslateModule, NgClass, SuggestionsPopupComponent, ThemedConfigurationSearchPageComponent, PageWithSidebarComponent, HomeCoarComponent],
+  imports: [ThemedHomeNewsComponent, NgTemplateOutlet, NgIf, ViewTrackerComponent, ThemedSearchFormComponent, ThemedTopLevelCommunityListComponent, RecentItemListComponent, AsyncPipe, TranslateModule, NgClass, SuggestionsPopupComponent, ThemedConfigurationSearchPageComponent, PageWithSidebarComponent],
 })
 export class HomePageComponent extends BaseComponent {
 

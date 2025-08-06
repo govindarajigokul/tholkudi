@@ -1,3 +1,10 @@
+// Remove any spacing/margin that creates unwanted sections
+:host {
+  display: block;
+  margin: 0 !important; // Remove all margins
+  padding: 0 !important; // Remove all padding
+}
+
 .hero-carousel {
   width: 100%;
   position: relative;
