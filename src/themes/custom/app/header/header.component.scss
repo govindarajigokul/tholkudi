@@ -7,8 +7,10 @@ header {
     padding: 0.5rem 1rem;
   }
 
-  .navbar-brand img {
-    height: 40px;
+  .navbar-brand img.tholkudi-logo {
+    height: 50px;
+    max-width: 200px;
+    object-fit: contain;
   }
 
   // Navigation buttons styling with new color #2b4878
