@@ -3,9 +3,27 @@
   background-color: #f8f4ec;
 }
 
+// Main background section (between carousel and footer)
+.main-background-section {
+  background-image: url('/assets/images/main-background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+
+  // No overlay - let the background image show clearly
+
+  // Ensure content appears properly
+  > * {
+    position: relative;
+    z-index: 2;
+  }
+}
+
 // Browse Categories Section
 .browse-categories-section {
-  background-color: #f8f4ec;
+  background-color: transparent; // Let the main background show through
   padding: 3rem 0 2rem 0;
 
   .browse-categories {

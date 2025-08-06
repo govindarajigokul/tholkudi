@@ -1,43 +1,45 @@
 <!-- ds-home-coar element removed as requested -->
 <ds-home-news></ds-home-news>
 
-<!-- Browse Categories Section -->
-<section class="browse-categories-section">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <div class="browse-categories">
-          <a routerLink="/browse/author" class="browse-item">
-            <img src="assets/custom/images/browse-author.png" alt="Browse by Author" />
-            <span>By Author</span>
-          </a>
-          <a routerLink="/browse/title" class="browse-item">
-            <img src="assets/custom/images/browse-title.png" alt="Browse by Title" />
-            <span>By Title</span>
-          </a>
-          <a routerLink="/browse/subject" class="browse-item">
-            <img src="assets/custom/images/browse-subject.png" alt="Browse by Subject" />
-            <span>By Subject</span>
-          </a>
-          <a routerLink="/browse/language" class="browse-item">
-            <img src="assets/custom/images/browse-language.png" alt="Browse by Language" />
-            <span>By Language</span>
-          </a>
-          <a routerLink="/browse/media" class="browse-item">
-            <img src="assets/custom/images/browse-media.png" alt="Browse by Media" />
-            <span>By Media</span>
-          </a>
-          <a routerLink="/browse/linguistictype" class="browse-item">
-            <img src="assets/custom/images/browse-linguistic.png" alt="Browse by Linguistic Data Type" />
-            <span>By Linguistic Data Type</span>
-          </a>
+<!-- Main Background Section (between carousel and footer) -->
+<div class="main-background-section">
+  <!-- Browse Categories Section -->
+  <section class="browse-categories-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="browse-categories">
+            <a routerLink="/browse/author" class="browse-item">
+              <img src="assets/custom/images/browse-author.png" alt="Browse by Author" />
+              <span>By Author</span>
+            </a>
+            <a routerLink="/browse/title" class="browse-item">
+              <img src="assets/custom/images/browse-title.png" alt="Browse by Title" />
+              <span>By Title</span>
+            </a>
+            <a routerLink="/browse/subject" class="browse-item">
+              <img src="assets/custom/images/browse-subject.png" alt="Browse by Subject" />
+              <span>By Subject</span>
+            </a>
+            <a routerLink="/browse/language" class="browse-item">
+              <img src="assets/custom/images/browse-language.png" alt="Browse by Language" />
+              <span>By Language</span>
+            </a>
+            <a routerLink="/browse/media" class="browse-item">
+              <img src="assets/custom/images/browse-media.png" alt="Browse by Media" />
+              <span>By Media</span>
+            </a>
+            <a routerLink="/browse/linguistictype" class="browse-item">
+              <img src="assets/custom/images/browse-linguistic.png" alt="Browse by Linguistic Data Type" />
+              <span>By Linguistic Data Type</span>
+            </a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<ds-configuration-search-page *ngIf="showDiscoverFilters"
+  <ds-configuration-search-page *ngIf="showDiscoverFilters"
                               [sideBarWidth]="3"
                               [showViewModes]="false"
                               [searchEnabled]="false"
@@ -49,6 +51,8 @@
   <ng-container *ngTemplateOutlet="homeContent"></ng-container>
 </div>
 <ds-suggestions-popup></ds-suggestions-popup>
+</div>
+<!-- End of main background section -->
 
 <ng-template #homeContent>
   <ng-container *ngIf="(site$ | async) as site">
