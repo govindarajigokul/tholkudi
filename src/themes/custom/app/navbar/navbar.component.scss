@@ -1,0 +1,32 @@
+// Custom navbar styling - hide main navigation since it's moved to header
+:host {
+  --ds-expandable-navbar-height: auto;
+
+  nav.navbar {
+    background-color: var(--ds-navbar-bg);
+    align-items: baseline;
+    padding: 0;
+
+    // Hide the navbar on desktop since navigation is now in header
+    @media screen and (min-width: map-get($grid-breakpoints, md)) {
+      display: none;
+    }
+  }
+
+  /** Mobile menu styling - keep for mobile user menu **/
+  @media screen and (max-width: map-get($grid-breakpoints, md)-0.02) {
+    .navbar {
+      width: 100vw;
+      background-color: var(--bs-white);
+      position: absolute;
+      overflow: hidden;
+      height: 0;
+      z-index: var(--ds-nav-z-index);
+      &.open {
+        height: auto;
+        min-height: 100vh;
+        border-bottom: 1px var(--ds-header-navbar-border-bottom-color) solid;
+      }
+    }
+  }
+}
