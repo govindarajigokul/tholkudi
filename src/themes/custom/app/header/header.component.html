@@ -12,28 +12,12 @@
 
         <!-- Navigation buttons - swapped order: About us first, Tamil Nadu Tribes second -->
         <div class="d-flex align-items-center me-3">
-          <!-- About us Button (with dropdown) - NOW FIRST -->
-          <div ngbDropdown #aboutDropdown="ngbDropdown" display="dynamic" placement="bottom-right" class="d-inline-block me-2">
-            <a href="javascript:void(0);" class="nav-button"
-               [attr.aria-label]="'menu.section.browse_global' | translate"
-               (click)="$event.preventDefault()"
-               role="menuitem"
-               aria-haspopup="menu"
-               ngbDropdownToggle>
-              {{ 'menu.section.browse_global' | translate }}
-            </a>
-            <div ngbDropdownMenu role="menu" class="dropdown-menu">
-              <a class="dropdown-item" routerLink="/browse/author">{{ 'menu.section.browse_global_by_author' | translate }}</a>
-              <a class="dropdown-item" routerLink="/browse/language">{{ 'menu.section.browse_global_by_language' | translate }}</a>
-              <a class="dropdown-item" routerLink="/browse/media">{{ 'menu.section.browse_global_by_media' | translate }}</a>
-              <a class="dropdown-item" routerLink="/browse/linguistictype">{{ 'menu.section.browse_global_by_linguistictype' | translate }}</a>
-              <a class="dropdown-item" routerLink="/browse/dateissued">{{ 'menu.section.browse_global_by_dateissued' | translate }}</a>
-              <a class="dropdown-item" routerLink="/browse/subject">{{ 'menu.section.browse_global_by_subject' | translate }}</a>
-              <a class="dropdown-item" routerLink="/browse/srsc">{{ 'menu.section.browse_global_by_srsc' | translate }}</a>
-              <a class="dropdown-item" routerLink="/browse/nsi">{{ 'menu.section.browse_global_by_nsi' | translate }}</a>
-              <a class="dropdown-item" routerLink="/browse/title">{{ 'menu.section.browse_global_by_title' | translate }}</a>
-            </div>
-          </div>
+          <!-- About us Button (simple link) - NOW FIRST -->
+          <a routerLink="/about-us" class="nav-button me-2"
+             aria-label="About Us"
+             role="menuitem">
+            About Us
+          </a>
 
           <!-- Tamil Nadu Tribes Button (simple link) - NOW SECOND -->
           <a routerLink="/community-list" class="nav-button"

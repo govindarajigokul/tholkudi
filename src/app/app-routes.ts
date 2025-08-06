@@ -257,6 +257,13 @@ export const APP_ROUTES: Route[] = [
           .then((m) => m.ROUTES),
         canActivate: [authenticatedGuard],
       },
+      {
+        path: 'about-us',
+        loadChildren: () => import('../themes/custom/app/about-us/about-us.component')
+          .then((m) => [{ path: '', component: m.AboutUsComponent }]),
+        data: { title: 'About Us' },
+        canActivate: [endUserAgreementCurrentUserGuard],
+      },
       { path: '**', pathMatch: 'full', component: ThemedPageNotFoundComponent },
     ],
   },
