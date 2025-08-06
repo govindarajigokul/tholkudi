@@ -35,27 +35,7 @@ import { ViewTrackerComponent } from '../../../../app/statistics/angulartics/dsp
   styleUrls: ['../../../../app/community-page/community-page.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
   animations: [fadeInOut],
-  standalone: true,
-  imports: [
-    ThemedComcolPageContentComponent,
-    ErrorComponent,
-    ThemedLoadingComponent,
-    NgIf,
-    TranslateModule,
-    ThemedCommunityPageSubCommunityListComponent,
-    ThemedCollectionPageSubCollectionListComponent,
-    ThemedComcolPageBrowseByComponent,
-    DsoEditMenuComponent,
-    ThemedComcolPageHandleComponent,
-    ComcolPageLogoComponent,
-    ComcolPageHeaderComponent,
-    AsyncPipe,
-    ViewTrackerComponent,
-    VarDirective,
-    RouterOutlet,
-    RouterModule,
-  ],
-})
+  })
 /**
  * This component represents a detail page for a single community
  */

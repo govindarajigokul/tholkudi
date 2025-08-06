@@ -9,9 +9,7 @@ import { CreditsContentComponent } from '../../../../../app/info/credits/credits
   styleUrls: ['../../../../../app/info/credits/credits.component.scss'],
   // templateUrl: './credits.component.html'
   templateUrl: '../../../../../app/info/credits/credits.component.html',
-  standalone: true,
-  imports: [CreditsContentComponent],
-})
+  })
 
 /**
  * Component displaying the Credits Statement

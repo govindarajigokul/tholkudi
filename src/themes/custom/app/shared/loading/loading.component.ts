@@ -9,9 +9,7 @@ import { LoadingComponent as BaseComponent } from '../../../../../app/shared/loa
   // styleUrls: ['./loading.component.scss'],
   templateUrl: '../../../../../app/shared/loading/loading.component.html',
   // templateUrl: './loading.component.html'
-  standalone: true,
-  imports: [NgIf],
-})
+  })
 export class LoadingComponent extends BaseComponent {
 
 }

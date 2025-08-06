@@ -15,14 +15,6 @@ import { BtnDisabledDirective } from '../../../../../../app/shared/btn-disabled.
   templateUrl: '../../../../../../app/item-page/media-viewer/media-viewer-video/media-viewer-video.component.html',
   // styleUrls: ['./media-viewer-video.component.scss'],
   styleUrls: ['../../../../../../app/item-page/media-viewer/media-viewer-video/media-viewer-video.component.scss'],
-  standalone: true,
-  imports: [
-    NgForOf,
-    NgbDropdownModule,
-    TranslateModule,
-    NgIf,
-    BtnDisabledDirective,
-  ],
-})
+  })
 export class MediaViewerVideoComponent extends BaseComponent {
 }

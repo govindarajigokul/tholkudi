@@ -20,8 +20,6 @@ import { AdminSidebarComponent as BaseComponent } from '../../../../../app/admin
   templateUrl: '../../../../../app/admin/admin-sidebar/admin-sidebar.component.html',
   // styleUrls: ['./admin-sidebar.component.scss']
   styleUrls: ['../../../../../app/admin/admin-sidebar/admin-sidebar.component.scss'],
-  standalone: true,
-  imports: [NgIf, NgbDropdownModule, NgClass, NgFor, NgComponentOutlet, AsyncPipe, TranslateModule],
-})
+  })
 export class AdminSidebarComponent extends BaseComponent {
 }

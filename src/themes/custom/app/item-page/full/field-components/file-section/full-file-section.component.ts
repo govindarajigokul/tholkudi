@@ -20,19 +20,6 @@ import { ThemedThumbnailComponent } from '../../../../../../../app/thumbnail/the
   styleUrls: ['../../../../../../../app/item-page/full/field-components/file-section/full-file-section.component.scss'],
   // templateUrl: './full-file-section.component.html',
   templateUrl: '../../../../../../../app/item-page/full/field-components/file-section/full-file-section.component.html',
-  standalone: true,
-  imports: [
-    PaginationComponent,
-    NgIf,
-    TranslateModule,
-    AsyncPipe,
-    VarDirective,
-    ThemedThumbnailComponent,
-    NgForOf,
-    ThemedFileDownloadLinkComponent,
-    FileSizePipe,
-    MetadataFieldWrapperComponent,
-  ],
-})
+  })
 export class FullFileSectionComponent extends BaseComponent {
 }

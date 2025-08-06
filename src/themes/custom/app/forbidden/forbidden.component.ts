@@ -11,9 +11,7 @@ import { ForbiddenComponent as BaseComponent } from '../../../../app/forbidden/f
   templateUrl: '../../../../app/forbidden/forbidden.component.html',
   // styleUrls: ['./forbidden.component.scss']
   styleUrls: ['../../../../app/forbidden/forbidden.component.scss'],
-  standalone: true,
-  imports: [RouterLink, TranslateModule],
-})
+  })
 /**
  * This component representing the `Forbidden` DSpace page.
  */

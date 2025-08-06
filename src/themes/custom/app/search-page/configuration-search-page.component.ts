@@ -34,9 +34,7 @@ import { ViewModeSwitchComponent } from '../../../../app/shared/view-mode-switch
       useClass: SearchConfigurationService,
     },
   ],
-  standalone: true,
-  imports: [NgIf, NgTemplateOutlet, PageWithSidebarComponent, ViewModeSwitchComponent, ThemedSearchResultsComponent, ThemedSearchSidebarComponent, ThemedSearchFormComponent, SearchLabelsComponent, AsyncPipe, TranslateModule],
-})
+  })
 
 /**
  * This component renders a search page using a configuration as input.

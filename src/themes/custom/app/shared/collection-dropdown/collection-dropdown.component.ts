@@ -20,9 +20,7 @@ import { ThemedLoadingComponent } from '../../../../../app/shared/loading/themed
   // templateUrl: './collection-dropdown.component.html',
   styleUrls: ['../../../../../app/shared/collection-dropdown/collection-dropdown.component.scss'],
   // styleUrls: ['./collection-dropdown.component.scss']
-  standalone: true,
-  imports: [NgIf, FormsModule, ReactiveFormsModule, InfiniteScrollModule, NgFor, ThemedLoadingComponent, AsyncPipe, TranslateModule],
-})
+  })
 export class CollectionDropdownComponent extends BaseComponent {
 
 }

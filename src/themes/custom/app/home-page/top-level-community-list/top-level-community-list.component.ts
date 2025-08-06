@@ -15,9 +15,7 @@ import { VarDirective } from '../../../../../app/shared/utils/var.directive';
   selector: 'ds-themed-top-level-community-list',
   styleUrls: ['./top-level-community-list.component.scss'],
   templateUrl: './top-level-community-list.component.html',
-  standalone: true,
-  imports: [VarDirective, NgIf, ObjectCollectionComponent, ErrorComponent, ThemedLoadingComponent, AsyncPipe, TranslateModule],
-})
+  })
 
 export class TopLevelCommunityListComponent extends BaseComponent {}
 

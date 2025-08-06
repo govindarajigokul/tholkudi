@@ -27,16 +27,6 @@ import {
     fadeIn,
     fadeInOut,
   ],
-  standalone: true,
-  imports: [
-    TranslateModule,
-    NgForOf,
-    AsyncPipe,
-    NgIf,
-    RouterLink,
-    ItemOperationComponent,
-    NgClass,
-  ],
-})
+  })
 export class ItemStatusComponent extends BaseComponent {
 }

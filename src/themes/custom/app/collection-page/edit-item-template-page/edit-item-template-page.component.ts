@@ -17,18 +17,7 @@ import { VarDirective } from '../../../../../app/shared/utils/var.directive';
   styleUrls: ['./edit-item-template-page.component.scss'],
   // templateUrl: './edit-item-template-page.component.html',
   templateUrl: '../../../../../app/collection-page/edit-item-template-page/edit-item-template-page.component.html',
-  standalone: true,
-  imports: [
-    ThemedDsoEditMetadataComponent,
-    RouterLink,
-    AsyncPipe,
-    VarDirective,
-    NgIf,
-    TranslateModule,
-    ThemedLoadingComponent,
-    AlertComponent,
-  ],
-})
+  })
 /**
  * Component for editing the item template of a collection
  */

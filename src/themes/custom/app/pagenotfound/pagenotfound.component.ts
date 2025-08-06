@@ -14,9 +14,7 @@ import { PageNotFoundComponent as BaseComponent } from '../../../../app/pagenotf
   // templateUrl: './pagenotfound.component.html'
   templateUrl: '../../../../app/pagenotfound/pagenotfound.component.html',
   changeDetection: ChangeDetectionStrategy.Default,
-  standalone: true,
-  imports: [RouterLink, TranslateModule],
-})
+  })
 
 /**
  * This component representing the `PageNotFound` DSpace page.

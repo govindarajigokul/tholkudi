@@ -1,0 +1,152 @@
+// Custom home page styles
+:host {
+  background-color: #f8f4ec;
+}
+
+// Colored borders
+.top-border {
+  height: 4px;
+  background-color: #eca43c; // Golden color for top border
+  width: 100%;
+  margin: 0;
+}
+
+.bottom-border {
+  height: 4px;
+  background-color: #6c2c34; // Burgundy color for bottom border
+  width: 100%;
+  margin: 0;
+}
+
+// Main background section (between carousel and footer)
+.main-background-section {
+  background-image: url('/assets/images/main-background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+
+  // No overlay - let the background image show clearly
+
+  // Ensure content appears properly
+  > * {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+// Browse Categories Section
+.browse-categories-section {
+  background-color: transparent; // Let the main background show through
+  padding: 3rem 0 0.5rem 0; // Reduced bottom padding from 2rem to 0.5rem
+
+  .browse-categories {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+
+    .browse-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      color: #333;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+      flex: 1;
+      min-width: 120px;
+      max-width: 150px;
+      cursor: pointer;
+      position: relative;
+      z-index: 1;
+
+      &:hover {
+        transform: translateY(-5px);
+        opacity: 0.8;
+        text-decoration: none;
+        color: #2b4878;
+      }
+
+      &:focus {
+        outline: 2px solid #2b4878;
+        outline-offset: 2px;
+      }
+
+      img {
+        width: 60px;
+        height: 60px;
+        object-fit: contain;
+        margin-bottom: 0.8rem;
+        transition: transform 0.3s ease;
+        pointer-events: none; // Ensure clicks pass through to the link
+      }
+
+      &:hover img {
+        transform: scale(1.1);
+      }
+
+      span {
+        font-size: 0.9rem;
+        font-weight: 500;
+        text-align: center;
+        line-height: 1.3;
+        color: inherit;
+      }
+    }
+  }
+
+  // Responsive design
+  @media (max-width: 992px) {
+    .browse-categories {
+      justify-content: center;
+      gap: 1.5rem;
+
+      .browse-item {
+        flex: 0 0 calc(33.333% - 1rem);
+        max-width: 140px;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 2rem 0 1.5rem 0;
+
+    .browse-categories {
+      gap: 1rem;
+
+      .browse-item {
+        flex: 0 0 calc(50% - 0.5rem);
+        max-width: 120px;
+
+        img {
+          width: 50px;
+          height: 50px;
+        }
+
+        span {
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .browse-categories {
+      .browse-item {
+        flex: 0 0 calc(33.333% - 0.5rem);
+        max-width: 100px;
+
+        img {
+          width: 45px;
+          height: 45px;
+        }
+
+        span {
+          font-size: 0.75rem;
+        }
+      }
+    }
+  }
+}

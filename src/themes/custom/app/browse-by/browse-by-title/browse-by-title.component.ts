@@ -15,14 +15,6 @@ import { ThemedLoadingComponent } from '../../../../../app/shared/loading/themed
   styleUrls: ['../../../../../app/browse-by/browse-by-metadata/browse-by-metadata.component.scss'],
   // templateUrl: './browse-by-title.component.html',
   templateUrl: '../../../../../app/browse-by/browse-by-metadata/browse-by-metadata.component.html',
-  standalone: true,
-  imports: [
-    AsyncPipe,
-    NgIf,
-    TranslateModule,
-    ThemedLoadingComponent,
-    ThemedBrowseByComponent,
-  ],
-})
+  })
 export class BrowseByTitleComponent extends BaseComponent {
 }

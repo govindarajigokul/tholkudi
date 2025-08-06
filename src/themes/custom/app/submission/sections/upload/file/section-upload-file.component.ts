@@ -20,17 +20,7 @@ import { SubmissionSectionUploadFileViewComponent } from '../../../../../../../a
   styleUrls: ['../../../../../../../app/submission/sections/upload/file/section-upload-file.component.scss'],
   // templateUrl: './section-upload-file.component.html'
   templateUrl: '../../../../../../../app/submission/sections/upload/file/section-upload-file.component.html',
-  standalone: true,
-  imports: [
-    TranslateModule,
-    SubmissionSectionUploadFileViewComponent,
-    NgIf,
-    AsyncPipe,
-    ThemedFileDownloadLinkComponent,
-    FileSizePipe,
-    BtnDisabledDirective,
-  ],
-})
+  })
 export class SubmissionSectionUploadFileComponent
   extends BaseComponent {
 }

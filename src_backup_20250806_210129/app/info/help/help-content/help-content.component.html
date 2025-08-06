@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSpace 8 Search Features and Filters Guide</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background-color: #1976D2;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+        h1, h2, h3, h4 {
+            color: #1976D2;
+        }
+        h2 {
+            border-bottom: 2px solid #1976D2;
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+        .example {
+            background-color: #f5f5f5;
+            border-left: 4px solid #1976D2;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 5px 5px 0;
+        }
+        .example h4 {
+            margin-top: 0;
+        }
+        .note {
+            background-color: #fff8e1;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 5px 5px 0;
+        }
+        .tip {
+            background-color: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 5px 5px 0;
+        }
+        code {
+            background-color: #f0f0f0;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: Consolas, Monaco, 'Courier New', monospace;
+        }
+        .search-box {
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 15px 0;
+            background-color: #f9f9f9;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .toc {
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .toc ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+        .toc a {
+            text-decoration: none;
+            color: #1976D2;
+        }
+        .toc a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>DSpace 8 Search Features and Filters Guide</h1>
+        <p>A comprehensive guide to effectively search and filter content in DSpace 8</p>
+    </header>
+
+    <div class="toc">
+        <h2>Table of Contents</h2>
+        <ul>
+            <li><a href="/info/help#introduction">Introduction</a></li>
+            <li><a href="/info/help#basic-search">Basic Search</a></li>
+            <li><a href="/info/help#advanced-search">Advanced Search</a></li>
+            <li><a href="/info/help#search-operators">Search Operators</a></li>
+            <li><a href="/info/help#filters">Search Filters</a>
+                <ul>
+                    <li><a href="/info/help#filter-date">Date Filters</a></li>
+                    <li><a href="/info/help#filter-author">Author Filters</a></li>
+                    <li><a href="/info/help#filter-subject">Subject Filters</a></li>
+                    <li><a href="/info/help#filter-collection">Collection Filters</a></li>
+                    <li><a href="/info/help#filter-document-type">Document Type Filters</a></li>
+                    <li><a href="/info/help#filter-access-rights">Access Rights Filters</a></li>
+                </ul>
+            </li>
+            <li><a href="/info/help#sorting">Sorting Results</a></li>
+            <li><a href="/info/help#boolean-operators">Boolean Operators</a></li>
+            <li><a href="/info/help#phrases">Phrase Searching</a></li>
+            <li><a href="/info/help#wildcards">Wildcards and Truncation</a></li>
+            <li><a href="/info/help#field-search">Field-Specific Searching</a></li>
+            <li><a href="/info/help#facet-navigation">Facet Navigation</a></li>
+            <li><a href="/info/help#saving-searches">Saving Searches</a></li>
+            <li><a href="/info/help#tips">Search Tips and Best Practices</a></li>
+        </ul>
+    </div>
+
+    <section id="introduction">
+        <h2>Introduction</h2>
+        <p>DSpace 8 provides powerful search capabilities to help you discover and access digital content efficiently. This guide covers all search features and filters available in DSpace 8, complete with examples to help you craft effective searches.</p>
+        
+        <div class="note">
+            <p><strong>Note:</strong> DSpace 8 uses Apache Solr as its search engine, offering fast and flexible search functionality with advanced features like faceted searching, real-time indexing, and robust text analysis.</p>
+        </div>
+    </section>
+
+    <section id="basic-search">
+        <h2>Basic Search</h2>
+        <p>The basic search in DSpace 8 allows you to quickly search across all metadata fields. The search box is typically located at the top of the DSpace interface.</p>
+        
+        <div class="search-box">
+            <input type="text" placeholder="Search DSpace" style="width: 80%; padding: 8px;">
+            <button style="padding: 8px; background-color: #1976D2; color: white; border: none; border-radius: 3px;">Search</button>
+        </div>
+        
+        <div class="example">
+            <h4>Basic Search Examples:</h4>
+            <ul>
+                <li><strong>climate change</strong> - Finds items containing both "climate" and "change" in any metadata field</li>
+                <li><strong>neural networks</strong> - Searches for items about neural networks</li>
+                <li><strong>COVID-19 vaccine</strong> - Retrieves items related to COVID-19 vaccines</li>
+            </ul>
+        </div>
+        
+        <div class="tip">
+            <p><strong>Tip:</strong> By default, basic search looks across all searchable fields including title, author, abstract, keywords, and full text (if available).</p>
+        </div>
+    </section>
+
+    <section id="advanced-search">
+        <h2>Advanced Search</h2>
+        <p>Advanced search provides more control over your search by allowing you to specify fields, combine search terms with different operators, and apply multiple filters simultaneously.</p>
+        
+        <div class="example">
+            <h4>Advanced Search Form Example:</h4>
+            <table>
+                <tr>
+                    <td>
+                        <select style="padding: 5px;">
+                            <option>Title</option>
+                            <option>Author</option>
+                            <option>Subject</option>
+                            <option>Abstract</option>
+                            <option>Series</option>
+                            <option>Identifier</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select style="padding: 5px;">
+                            <option>Contains</option>
+                            <option>Equals</option>
+                            <option>Starts with</option>
+                            <option>Ends with</option>
+                        </select>
+                    </td>
+                    <td><input type="text" placeholder="Enter search terms" style="width: 100%; padding: 5px;"></td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <select style="padding: 5px;">
+                            <option>AND</option>
+                            <option>OR</option>
+                            <option>NOT</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <select style="padding: 5px;">
+                            <option>Author</option>
+                            <option>Title</option>
+                            <option>Subject</option>
+                            <option>Abstract</option>
+                            <option>Series</option>
+                            <option>Identifier</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select style="padding: 5px;">
+                            <option>Contains</option>
+                            <option>Equals</option>
+                            <option>Starts with</option>
+                            <option>Ends with</option>
+                        </select>
+                    </td>
+                    <td><input type="text" placeholder="Enter search terms" style="width: 100%; padding: 5px;"></td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="example">
+            <h4>Advanced Search Examples:</h4>
+            <ul>
+                <li><strong>Title contains "quantum computing" AND Author equals "Nielsen, Michael"</strong> - Finds items with "quantum computing" in the title authored by Michael Nielsen</li>
+                <li><strong>Abstract contains "climate change" AND Subject contains "policy" AND Date issued is after "2020"</strong> - Retrieves recent climate change policy papers</li>
+                <li><strong>Title starts with "Artificial" AND Subject contains "ethics" NOT Author contains "Smith"</strong> - Finds items about artificial intelligence ethics not authored by anyone named Smith</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="search-operators">
+        <h2>Search Operators</h2>
+        <p>DSpace 8 supports various operators to refine your search queries.</p>
+        
+        <table>
+            <tr>
+                <th>Operator</th>
+                <th>Function</th>
+                <th>Example</th>
+            </tr>
+            <tr>
+                <td>AND</td>
+                <td>Finds items containing both terms</td>
+                <td>blockchain AND finance</td>
+            </tr>
+            <tr>
+                <td>OR</td>
+                <td>Finds items containing either term</td>
+                <td>covid OR coronavirus</td>
+            </tr>
+            <tr>
+                <td>NOT</td>
+                <td>Excludes items containing the specified term</td>
+                <td>climate NOT policy</td>
+            </tr>
+            <tr>
+                <td>+</td>
+                <td>Term must be present</td>
+                <td>+quantum computing</td>
+            </tr>
+            <tr>
+                <td>-</td>
+                <td>Term must not be present</td>
+                <td>artificial intelligence -ethics</td>
+            </tr>
+            <tr>
+                <td>" "</td>
+                <td>Searches for an exact phrase</td>
+                <td>"machine learning"</td>
+            </tr>
+            <tr>
+                <td>*</td>
+                <td>Wildcard for multiple characters</td>
+                <td>neuro*</td>
+            </tr>
+            <tr>
+                <td>?</td>
+                <td>Wildcard for a single character</td>
+                <td>wom?n</td>
+            </tr>
+            <tr>
+                <td>~n</td>
+                <td>Fuzzy search with similarity (n is 0-2)</td>
+                <td>algorithm~1</td>
+            </tr>
+            <tr>
+                <td>~n</td>
+                <td>Proximity search for phrases (n is number of words)</td>
+                <td>"climate change"~3</td>
+            </tr>
+        </table>
+        
+        <div class="example">
+            <h4>Search Operator Examples:</h4>
+            <ul>
+                <li><strong>machine AND learning NOT supervised</strong> - Finds items about machine learning excluding those focused on supervised learning</li>
+                <li><strong>"big data" OR "data mining"</strong> - Retrieves items containing either phrase</li>
+                <li><strong>cell~ biology</strong> - Performs a fuzzy search for "cell" (matching "cells", "sell", etc.) along with "biology"</li>
+                <li><strong>"renewable energy"~5</strong> - Finds items where "renewable" and "energy" appear within 5 words of each other</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="filters">
+        <h2>Search Filters</h2>
+        <p>DSpace 8 offers various filters to narrow down search results based on specific criteria.</p>
+        
+        <section id="filter-date">
+            <h3>Date Filters</h3>
+            <p>Filter results by publication or submission date.</p>
+            
+            <div class="example">
+                <h4>Date Filter Examples:</h4>
+                <ul>
+                    <li><strong>Date range: 2020-01-01 to 2023-12-31</strong> - Limits results to items published between 2020 and 2023</li>
+                    <li><strong>Last 5 years</strong> - Shows only items from the past five years</li>
+                    <li><strong>Before 2010</strong> - Displays items published before 2010</li>
+                    <li><strong>2022</strong> - Retrieves items from just the year 2022</li>
+                </ul>
+            </div>
+            
+            <div class="tip">
+                <p><strong>Tip:</strong> You can also use date operators in advanced search with <code>dateIssued:[2018-01-01 TO 2020-12-31]</code> for more precise control.</p>
+            </div>
+        </section>
+        
+        <section id="filter-author">
+            <h3>Author Filters</h3>
+            <p>Narrow results by author or contributor.</p>
+            
+            <div class="example">
+                <h4>Author Filter Examples:</h4>
+                <ul>
+                    <li><strong>Smith, John</strong> - Shows only items authored by John Smith</li>
+                    <li><strong>Department of Physics</strong> - Filters results to items from the Physics Department</li>
+                    <li><strong>Multiple selection: Smith, John + Johnson, Mary</strong> - Retrieves items authored by either John Smith or Mary Johnson</li>
+                    <li><strong>ORCID: 0000-0002-1825-0097</strong> - Finds items by the author with this ORCID identifier</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section id="filter-subject">
+            <h3>Subject Filters</h3>
+            <p>Filter results by subject keywords or classifications.</p>
+            
+            <div class="example">
+                <h4>Subject Filter Examples:</h4>
+                <ul>
+                    <li><strong>Artificial Intelligence</strong> - Shows items tagged with this subject</li>
+                    <li><strong>Multiple selection: Climate Change + Environmental Policy</strong> - Finds items tagged with either subject</li>
+                    <li><strong>Computer Science > Machine Learning</strong> - Retrieves items within this hierarchical subject classification</li>
+                    <li><strong>COVID-19</strong> - Displays items tagged with this specific subject</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section id="filter-collection">
+            <h3>Collection Filters</h3>
+            <p>Limit results to specific collections or communities.</p>
+            
+            <div class="example">
+                <h4>Collection Filter Examples:</h4>
+                <ul>
+                    <li><strong>Research Articles</strong> - Shows only items from the Research Articles collection</li>
+                    <li><strong>Faculty of Science</strong> - Retrieves items from all collections within the Faculty of Science community</li>
+                    <li><strong>Conference Proceedings</strong> - Limits results to items in the Conference Proceedings collection</li>
+                    <li><strong>Multiple selection: Theses + Dissertations</strong> - Shows items from either collection</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section id="filter-document-type">
+            <h3>Document Type Filters</h3>
+            <p>Filter results by the type of resource.</p>
+            
+            <div class="example">
+                <h4>Document Type Filter Examples:</h4>
+                <ul>
+                    <li><strong>Article</strong> - Shows only journal articles</li>
+                    <li><strong>Thesis</strong> - Retrieves only theses</li>
+                    <li><strong>Conference Paper</strong> - Limits results to conference papers</li>
+                    <li><strong>Multiple selection: Book + Book Chapter</strong> - Shows either books or book chapters</li>
+                    <li><strong>Dataset</strong> - Retrieves only research datasets</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section id="filter-access-rights">
+            <h3>Access Rights Filters</h3>
+            <p>Filter results based on access permissions.</p>
+            
+            <div class="example">
+                <h4>Access Rights Filter Examples:</h4>
+                <ul>
+                    <li><strong>Open Access</strong> - Shows only items with unrestricted access</li>
+                    <li><strong>Restricted</strong> - Retrieves items with limited access</li>
+                    <li><strong>Embargoed</strong> - Shows items currently under embargo</li>
+                    <li><strong>Metadata Only</strong> - Displays items where only metadata is accessible</li>
+                </ul>
+            </div>
+        </section>
+    </section>
+
+    <section id="sorting">
+        <h2>Sorting Results</h2>
+        <p>DSpace 8 allows you to sort search results based on various criteria.</p>
+        
+        <div class="example">
+            <h4>Sorting Options:</h4>
+            <ul>
+                <li><strong>Relevance</strong> - Default sort, items most closely matching your search query appear first</li>
+                <li><strong>Title (A-Z/Z-A)</strong> - Alphabetical sorting by title</li>
+                <li><strong>Date (newest/oldest)</strong> - Chronological sorting by publication date</li>
+                <li><strong>Author (A-Z/Z-A)</strong> - Alphabetical sorting by first author</li>
+                <li><strong>Issue Date (newest/oldest)</strong> - Sort by when item was issued</li>
+                <li><strong>Most downloads</strong> - Sort by popularity based on download count</li>
+            </ul>
+        </div>
+        
+        <div class="tip">
+            <p><strong>Tip:</strong> When looking for the most recent research, sort by "Date (newest first)" to see the latest publications at the top.</p>
+        </div>
+    </section>
+
+    <section id="boolean-operators">
+        <h2>Boolean Operators</h2>
+        <p>DSpace 8 supports Boolean operators (AND, OR, NOT) to create complex search queries.</p>
+        
+        <div class="example">
+            <h4>Boolean Operator Examples:</h4>
+            <ul>
+                <li><strong>(climate AND change) OR (global AND warming)</strong> - Finds items about either climate change or global warming</li>
+                <li><strong>cancer AND (treatment OR therapy) NOT surgery</strong> - Retrieves items about cancer treatments or therapies excluding surgical approaches</li>
+                <li><strong>renewable AND (solar OR wind OR hydro) NOT nuclear</strong> - Finds items about renewable energy sources excluding nuclear</li>
+                <li><strong>(COVID-19 OR coronavirus) AND (vaccine AND effectiveness)</strong> - Retrieves items about COVID-19 vaccine effectiveness</li>
+            </ul>
+        </div>
+        
+        <div class="note">
+            <p><strong>Note:</strong> Boolean operators must be capitalized (AND, OR, NOT) to be recognized as operators. When not capitalized, they are treated as regular search terms.</p>
+        </div>
+    </section>
+
+    <section id="phrases">
+        <h2>Phrase Searching</h2>
+        <p>Use quotation marks to search for exact phrases in DSpace 8.</p>
+        
+        <div class="example">
+            <h4>Phrase Search Examples:</h4>
+            <ul>
+                <li><strong>"artificial intelligence"</strong> - Finds items containing this exact phrase</li>
+                <li><strong>"climate change" AND "public policy"</strong> - Retrieves items containing both phrases</li>
+                <li><strong>"quantum computing" NOT "quantum mechanics"</strong> - Finds items about quantum computing that don't mention quantum mechanics</li>
+                <li><strong>"Internet of Things" AND "security challenges"</strong> - Retrieves items containing both phrases</li>
+            </ul>
+        </div>
+        
+        <div class="tip">
+            <p><strong>Tip:</strong> For phrases with common words, using quotation marks ensures more relevant results by searching for the exact phrase rather than individual terms.</p>
+        </div>
+    </section>
+
+    <section id="wildcards">
+        <h2>Wildcards and Truncation</h2>
+        <p>DSpace 8 supports wildcards for more flexible searching.</p>
+        
+        <div class="example">
+            <h4>Wildcard Examples:</h4>
+            <ul>
+                <li><strong>environ*</strong> - Matches environment, environmental, environments, etc.</li>
+                <li><strong>wom?n</strong> - Matches woman and women</li>
+                <li><strong>colo*r</strong> - Matches color, colour, colorimeter, etc.</li>
+                <li><strong>econom*</strong> - Matches economy, economic, economics, economical, etc.</li>
+                <li><strong>neuro???ence</strong> - Matches neuroscience with any three characters in the middle</li>
+            </ul>
+        </div>
+        
+        <div class="note">
+            <p><strong>Note:</strong> The asterisk (*) replaces zero or more characters, while the question mark (?) replaces exactly one character.</p>
+        </div>
+    </section>
+
+    <section id="field-search">
+        <h2>Field-Specific Searching</h2>
+        <p>DSpace 8 allows you to search specific metadata fields using field prefixes.</p>
+        
+        <div class="example">
+            <h4>Field Search Examples:</h4>
+            <ul>
+                <li><strong>title:"deep learning"</strong> - Searches only in the title field for the phrase "deep learning"</li>
+                <li><strong>author:Smith AND subject:physics</strong> - Finds items authored by Smith in the field of physics</li>
+                <li><strong>abstract:climate AND dateIssued:[2020 TO 2023]</strong> - Retrieves items with "climate" in the abstract published between 2020 and 2023</li>
+                <li><strong>publisher:Elsevier AND title:neural</strong> - Finds items published by Elsevier with "neural" in the title</li>
+                <li><strong>subject:"machine learning" AND author:Johnson</strong> - Retrieves machine learning papers by author Johnson</li>
+            </ul>
+        </div>
+        
+        <table>
+            <tr>
+                <th>Common Field Prefixes</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>title:</td>
+                <td>Searches in item titles</td>
+            </tr>
+            <tr>
+                <td>author:</td>
+                <td>Searches for specific authors</td>
+            </tr>
+            <tr>
+                <td>subject:</td>
+                <td>Searches in subject keywords</td>
+            </tr>
+            <tr>
+                <td>abstract:</td>
+                <td>Searches in item abstracts</td>
+            </tr>
+            <tr>
+                <td>dateIssued:</td>
+                <td>Searches by publication date</td>
+            </tr>
+            <tr>
+                <td>publisher:</td>
+                <td>Searches by publisher name</td>
+            </tr>
+            <tr>
+                <td>language:</td>
+                <td>Searches by content language</td>
+            </tr>
+            <tr>
+                <td>identifier:</td>
+                <td>Searches for specific identifiers (DOI, ISBN, etc.)</td>
+            </tr>
+        </table>
+    </section>
+
+    <section id="facet-navigation">
+        <h2>Facet Navigation</h2>
+        <p>DSpace 8 provides faceted navigation to refine search results dynamically.</p>
+        
+        <div class="example">
+            <h4>Facet Navigation Example:</h4>
+            <p>After searching for "climate change", the facet navigation panel might show:</p>
+            <ul>
+                <li><strong>Author facet:</strong>
+                    <ul>
+                        <li>Smith, John (42)</li>
+                        <li>Johnson, Sarah (28)</li>
+                        <li>Williams, David (17)</li>
+                    </ul>
+                </li>
+                <li><strong>Subject facet:</strong>
+                    <ul>
+                        <li>Environmental Science (63)</li>
+                        <li>Climate Policy (35)</li>
+                        <li>Global Warming (29)</li>
+                    </ul>
+                </li>
+                <li><strong>Date facet:</strong>
+                    <ul>
+                        <li>2020-2023 (87)</li>
+                        <li>2015-2019 (64)</li>
+                        <li>2010-2014 (31)</li>
+                    </ul>
+                </li>
+            </ul>
+            <p>Clicking on "Smith, John" under Author would refine results to show only climate change items by John Smith.</p>
+        </div>
+        
+        <div class="tip">
+            <p><strong>Tip:</strong> You can combine multiple facets (e.g., select both an author and a date range) to narrow down results more precisely.</p>
+        </div>
+    </section>
+
+    <section id="saving-searches">
+        <h2>Saving Searches</h2>
+        <p>DSpace 8 allows registered users to save searches for future use.</p>
+        
+        <div class="example">
+            <h4>How to Save a Search:</h4>
+            <ol>
+                <li>Perform your search and apply desired filters</li>
+                <li>Click the "Save this search" button (usually represented by a bookmark or star icon)</li>
+                <li>Enter a name for your saved search</li>
+                <li>Choose whether to receive email alerts for new matching items (optional)</li>
+                <li>Click "Save"</li>
+            </ol>
+        </div>
+        
+        <div class="example">
+            <h4>Saved Search Examples:</h4>
+            <ul>
+                <li><strong>"Recent AI Ethics Papers"</strong> - Saved search for "ethics" AND "artificial intelligence" with date filter for last 2 years</li>
+                <li><strong>"My Department's Publications"</strong> - Saved search filtering by a specific department and recent years</li>
+                <li><strong>"COVID Vaccine Research"</strong> - Saved search for COVID-19 vaccine research with alerts for new content</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="tips">
+        <h2>Search Tips and Best Practices</h2>
+        
+        <div class="tip">
+            <h4>General Search Tips:</h4>
+            <ul>
+                <li><strong>Start broad, then narrow:</strong> Begin with broader search terms, then use filters to refine results</li>
+                <li><strong>Use synonyms:</strong> Try different terms for the same concept (e.g., "global warming" OR "climate change")</li>
+                <li><strong>Check spelling:</strong> DSpace 8 has limited spelling correction, so verify your spelling</li>
+                <li><strong>Use specific fields:</strong> Search specific fields (title:, author:) for more precise results</li>
+                <li><strong>Combine approaches:</strong> Use both filters and Boolean operators for complex searches</li>
+                <li><strong>Leverage facets:</strong> After an initial search, use facets to drill down into results</li>
+                <li><strong>Utilize phrase searching:</strong> Put multi-word concepts in quotation marks</li>
+                <li><strong>Save successful searches:</strong> When you find an effective search strategy, save it for future use</li>
+            </ul>
+        </div>
+        
+        <div class="example">
+            <h4>Search Strategy Examples:</h4>
+            <ul>
+                <li><strong>For a literature review:</strong> Start with broader topic terms, then use facets to focus on recent years, specific authors, or methodologies</li>
+                <li><strong>For finding specific research:</strong> Use field-specific searching with author names and keywords in the title or abstract</li>
+                <li><strong>For interdisciplinary topics:</strong> Use OR between related discipline terms (e.g., "AI" OR "artificial intelligence" AND "ethics" OR "moral")</li>
+                <li><strong>For comprehensive searches:</strong> Use wildcards and synonyms to capture variations (e.g., econom* AND (develop* OR grow*))</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer style="margin-top: 50px; padding: 20px; background-color: #f5f5f5; border-radius: 5px; text-align: center;">
+        <p>This comprehensive guide covers the search features and filters available in DSpace 8. For further assistance, please contact your repository administrator.</p>
+        <p>Last updated: May 19, 2025</p>
+    </footer>
+</body>
+</html>

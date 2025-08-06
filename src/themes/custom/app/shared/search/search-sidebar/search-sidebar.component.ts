@@ -34,8 +34,6 @@ import { ViewModeSwitchComponent } from '../../../../../../app/shared/view-mode-
       useClass: SearchConfigurationService,
     },
   ],
-  standalone: true,
-  imports: [NgIf, ViewModeSwitchComponent, SearchSwitchConfigurationComponent, ThemedSearchFiltersComponent, ThemedSearchSettingsComponent, TranslateModule, AdvancedSearchComponent, AsyncPipe],
-})
+  })
 export class SearchSidebarComponent extends BaseComponent {
 }

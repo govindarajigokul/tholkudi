@@ -16,9 +16,7 @@ import { CommunityListElementComponent as BaseComponent } from '../../../../../.
   styleUrls: ['../../../../../../app/shared/object-list/community-list-element/community-list-element.component.scss'],
   // templateUrl: './community-list-element.component.html'
   templateUrl: '../../../../../../app/shared/object-list/community-list-element/community-list-element.component.html',
-  standalone: true,
-  imports: [NgIf, RouterLink],
-})
+  })
 /**
  * Component representing a list element for a community
  */

@@ -1,0 +1,35 @@
+:root {
+  --ds-body-bg: #f3ede6; /* soft earthy beige for background */
+  --ds-text-primary-color: #3b2e1a; /* deep earthy brown for main text */
+  --ds-text-secondary-color: #6f4e37; /* lighter brown for metadata or captions */
+
+  --ds-header-bg: #5f3721; /* earthy brown */
+  --ds-footer-bg: #6f4e37;
+
+  --ds-navbar-link-color: #000000;
+  --ds-navbar-link-color-hover: #e0c878;
+
+  --ds-navbar-icon-color: #ffffff;
+  --ds-navbar-icon-color-hover: #fffff9;
+
+  --ds-home-news-link-color: #e0c878;
+
+  /* Header layout */
+  --ds-header-logo-height: 60px;
+  --ds-header-height: 80px;
+}
+
+@media (max-width: 767.98px) {
+  :root {
+    --ds-header-logo-height: 60px;
+    --ds-header-height: 90px;
+  }
+}
+
+@media (min-width: 768px) {
+  :root {
+    --ds-header-logo-height: 60px;
+    --ds-header-height: 80px;
+  }
+}
+

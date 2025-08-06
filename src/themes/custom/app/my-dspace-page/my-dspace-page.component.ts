@@ -36,16 +36,6 @@ import { ThemedSearchComponent } from '../../../../app/shared/search/themed-sear
       useClass: MyDSpaceConfigurationService,
     },
   ],
-  standalone: true,
-  imports: [
-    ThemedSearchComponent,
-    MyDSpaceNewSubmissionComponent,
-    AsyncPipe,
-    RoleDirective,
-    NgIf,
-    SuggestionsNotificationComponent,
-    MyDspaceQaEventsNotificationsComponent,
-  ],
-})
+  })
 export class MyDSpacePageComponent extends BaseComponent {
 }

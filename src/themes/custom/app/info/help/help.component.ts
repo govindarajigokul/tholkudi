@@ -9,9 +9,7 @@ import { HelpContentComponent } from '../../../../../app/info/help/help-content/
   styleUrls: ['../../../../../app/info/help/help.component.scss'],
   // templateUrl: './help.component.html'
   templateUrl: '../../../../../app/info/help/help.component.html',
-  standalone: true,
-  imports: [HelpContentComponent],
-})
+  })
 
 /**
  * Component displaying the Help Statement

@@ -1,0 +1,82 @@
+:host {
+  --ds-header-navbar-border-bottom-style: solid var(--ds-header-navbar-border-bottom-height) var(--ds-header-navbar-border-bottom-color);
+  --ds-expandable-navbar-border-top-style: solid var(--ds-expandable-navbar-border-top-height) var(--ds-expandable-navbar-border-top-color);
+  --ds-expandable-navbar-height: calc(100vh - var(--ds-header-height));
+
+  #header-navbar-wrapper {
+    // Do not use z-index to avoid covering media viewer
+    position: relative; // required by the mobile collapsible navbar
+    border-bottom: var(--ds-header-navbar-border-bottom-style);
+
+    #mobile-navbar-wrapper {
+      width: 100%;
+      background-color: var(--ds-expandable-navbar-bg);
+      position: absolute;
+      z-index: var(--ds-nav-z-index);
+      overflow: hidden;
+
+      #collapsible-mobile-navbar {
+        min-height: var(--ds-expandable-navbar-height);
+        height: auto;
+        border-bottom: var(--ds-header-navbar-border-bottom-style);
+      }
+    }
+  }
+
+  /* MENU ITEMS */
+  ::ng-deep {
+    .ds-menu-item,
+    .ds-menu-toggler-wrapper {
+      white-space: nowrap;
+      text-decoration: none;
+    }
+
+    nav#desktop-navbar {
+      #main-site-navigation {
+        .ds-menu-item-wrapper,
+        .ds-menu-item,
+        .ds-menu-toggler-wrapper {
+          display: flex;
+          align-items: center;
+          height: 100%;
+        }
+
+        .ds-menu-item {
+          padding: var(--ds-navbar-item-vertical-padding) var(--ds-navbar-item-horizontal-padding);
+        }
+
+        .ds-menu-item,
+        .ds-menu-toggler-wrapper {
+          color: var(--ds-navbar-link-color, #ffffff) !important;
+          font-weight: 500;
+          text-transform: uppercase;
+
+          &:hover,
+          &:focus {
+            color: var(--ds-navbar-link-color-hover, #ffff99) !important;
+          }
+        }
+
+        .dropdown-menu {
+          .ds-menu-item {
+            padding: var(--ds-navbar-dropdown-item-vertical-padding) var(--ds-navbar-dropdown-item-horizontal-padding);
+          }
+        }
+      }
+    }
+
+    nav#collapsible-mobile-navbar {
+      border-top: var(--ds-expandable-navbar-border-top-style);
+      padding-top: var(--ds-expandable-navbar-padding-top);
+
+      #main-site-navigation {
+        .ds-menu-item {
+          padding: var(--ds-expandable-navbar-item-vertical-padding) 0;
+        }
+      }
+    }
+  }
+}
+
+
+

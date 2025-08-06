@@ -23,9 +23,7 @@ import { ViewTrackerComponent } from '../../../../app/statistics/angulartics/dsp
   selector: 'ds-themed-home-page',
   styleUrls: ['./home-page.component.scss'],
   templateUrl: './home-page.component.html',
-  standalone: true,
-  imports: [ThemedHomeNewsComponent, NgTemplateOutlet, NgIf, ViewTrackerComponent, ThemedSearchFormComponent, ThemedTopLevelCommunityListComponent, RecentItemListComponent, AsyncPipe, TranslateModule, NgClass, SuggestionsPopupComponent, ThemedConfigurationSearchPageComponent, PageWithSidebarComponent, RouterLink],
-})
+  })
 export class HomePageComponent extends BaseComponent {
 
 }

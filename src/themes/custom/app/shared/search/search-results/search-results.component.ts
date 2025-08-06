@@ -26,19 +26,7 @@ import { SearchResultsSkeletonComponent } from '../../../../../../app/shared/sea
     fadeIn,
     fadeInOut,
   ],
-  standalone: true,
-  imports: [
-    AsyncPipe,
-    ErrorComponent,
-    NgIf,
-    NgxSkeletonLoaderModule,
-    ObjectCollectionComponent,
-    RouterLink,
-    SearchExportCsvComponent,
-    SearchResultsSkeletonComponent,
-    TranslateModule,
-  ],
-})
+  })
 export class SearchResultsComponent extends BaseComponent {
 
 }

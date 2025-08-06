@@ -18,15 +18,6 @@ import { HoverOutsideDirective } from '../../../../../app/shared/utils/hover-out
   // styleUrls: ['./expandable-navbar-section.component.scss'],
   styleUrls: ['../../../../../app/navbar/expandable-navbar-section/expandable-navbar-section.component.scss'],
   animations: [slide],
-  standalone: true,
-  imports: [
-    AsyncPipe,
-    HoverOutsideDirective,
-    NgComponentOutlet,
-    NgFor,
-    NgIf,
-    RouterLinkActive,
-  ],
-})
+  })
 export class ExpandableNavbarSectionComponent extends BaseComponent {
 }

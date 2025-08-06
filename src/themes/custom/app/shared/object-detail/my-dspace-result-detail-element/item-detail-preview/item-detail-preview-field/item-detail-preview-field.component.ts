@@ -12,13 +12,6 @@ import { ItemDetailPreviewFieldComponent as BaseComponent } from '../../../../..
   selector: 'ds-themed-item-detail-preview-field',
   // templateUrl: './item-detail-preview-field.component.html',
   templateUrl: '../../../../../../../../app/shared/object-detail/my-dspace-result-detail-element/item-detail-preview/item-detail-preview-field/item-detail-preview-field.component.html',
-  standalone: true,
-  imports: [
-    MetadataFieldWrapperComponent,
-    NgFor,
-    NgIf,
-    TranslateModule,
-  ],
-})
+  })
 export class ItemDetailPreviewFieldComponent extends BaseComponent {
 }

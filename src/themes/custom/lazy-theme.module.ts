@@ -2,7 +2,7 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { NgxGalleryModule } from '@kolkov/ngx-gallery';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -12,7 +12,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 
 import { RootModule } from '../../app/root.module';
-import { SearchResultsSkeletonComponent } from '../../app/shared/search/search-results/search-results-skeleton/search-results-skeleton.component';
+
 import { MetadataImportPageComponent } from './app/admin/admin-import-metadata-page/metadata-import-page.component';
 import { AdminSidebarComponent } from './app/admin/admin-sidebar/admin-sidebar.component';
 import { EditBitstreamPageComponent } from './app/bitstream-page/edit-bitstream-page/edit-bitstream-page.component';
@@ -106,6 +106,7 @@ import { ThumbnailComponent } from './app/thumbnail/thumbnail.component';
 import { WorkflowItemDeleteComponent } from './app/workflowitems-edit-page/workflow-item-delete/workflow-item-delete.component';
 import { WorkflowItemSendBackComponent } from './app/workflowitems-edit-page/workflow-item-send-back/workflow-item-send-back.component';
 import { WorkspaceItemsDeletePageComponent } from './app/workspaceitems-edit-page/workspaceitems-delete-page/workspaceitems-delete-page.component';
+import { AboutUsComponent } from './app/about-us/about-us.component';
 
 
 const DECLARATIONS = [
@@ -202,7 +203,7 @@ const DECLARATIONS = [
   ProfilePageMetadataFormComponent,
   SubmissionUploadFilesComponent,
   ComcolPageContentComponent,
-  SearchResultsSkeletonComponent,
+  AboutUsComponent,
 ];
 
 @NgModule({
@@ -211,6 +212,7 @@ const DECLARATIONS = [
     CommonModule,
     DragDropModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     NgbModule,
     RouterModule,
@@ -218,8 +220,9 @@ const DECLARATIONS = [
     StoreModule,
     StoreRouterConnectingModule,
     TranslateModule,
-    FormsModule,
     NgxGalleryModule,
+  ],
+  declarations: [
     ...DECLARATIONS,
   ],
 })

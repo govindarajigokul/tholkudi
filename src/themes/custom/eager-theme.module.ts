@@ -1,12 +1,16 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { TranslateModule } from '@ngx-translate/core';
 
 import { RootModule } from '../../app/root.module';
 import { JournalComponent } from './app/entity-groups/journal-entities/item-pages/journal/journal.component';
 import { JournalIssueComponent } from './app/entity-groups/journal-entities/item-pages/journal-issue/journal-issue.component';
 import { JournalVolumeComponent } from './app/entity-groups/journal-entities/item-pages/journal-volume/journal-volume.component';
 import { PersonComponent } from './app/entity-groups/research-entities/item-pages/person/person.component';
-// import { FooterComponent } from './app/footer/footer.component'; // Removed - using KAR footer
+import { FooterComponent } from './app/footer/footer.component';
 import { HeaderComponent } from './app/header/header.component';
 import { HeaderNavbarWrapperComponent } from './app/header-nav-wrapper/header-navbar-wrapper.component';
 import { HomeNewsComponent } from './app/home-page/home-news/home-news.component';
@@ -63,7 +67,7 @@ const DECLARATIONS = [
   HeaderNavbarWrapperComponent,
   NavbarComponent,
   SearchNavbarComponent,
-  // FooterComponent, // Removed - using KAR footer
+  FooterComponent,
   CreateCollectionParentSelectorComponent,
   CreateCommunityParentSelectorComponent,
   CreateItemParentSelectorComponent,
@@ -78,6 +82,13 @@ const DECLARATIONS = [
   imports: [
     CommonModule,
     RootModule,
+    TranslateModule,
+    RouterModule,
+    NgbModule,
+    FormsModule,
+    ReactiveFormsModule,
+  ],
+  declarations: [
     ...DECLARATIONS,
   ],
   providers: [

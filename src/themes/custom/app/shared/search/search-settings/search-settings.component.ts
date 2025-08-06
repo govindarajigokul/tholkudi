@@ -32,8 +32,6 @@ import { SidebarDropdownComponent } from '../../../../../../app/shared/sidebar/s
       useClass: SearchConfigurationService,
     },
   ],
-  standalone: true,
-  imports: [NgIf, SidebarDropdownComponent, NgFor, FormsModule, PageSizeSelectorComponent, TranslateModule],
-})
+  })
 
 export class SearchSettingsComponent extends BaseComponent {}

@@ -10,11 +10,6 @@ import { ComcolPageContentComponent as BaseComponent } from '../../../../../../a
   styleUrls: ['../../../../../../app/shared/comcol/comcol-page-content/comcol-page-content.component.scss'],
   // templateUrl: './comcol-page-content.component.html',
   templateUrl: '../../../../../../app/shared/comcol/comcol-page-content/comcol-page-content.component.html',
-  imports: [
-    TranslateModule,
-    NgIf,
-  ],
-  standalone: true,
-})
+  })
 export class ComcolPageContentComponent extends BaseComponent {
 }

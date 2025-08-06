@@ -37,25 +37,7 @@ import { ViewTrackerComponent } from '../../../../app/statistics/angulartics/dsp
     fadeIn,
     fadeInOut,
   ],
-  standalone: true,
-  imports: [
-    ThemedComcolPageContentComponent,
-    ErrorComponent,
-    NgIf,
-    ThemedLoadingComponent,
-    TranslateModule,
-    ViewTrackerComponent,
-    VarDirective,
-    AsyncPipe,
-    ComcolPageHeaderComponent,
-    ComcolPageLogoComponent,
-    ThemedComcolPageHandleComponent,
-    DsoEditMenuComponent,
-    ThemedComcolPageBrowseByComponent,
-    ObjectCollectionComponent,
-    RouterOutlet,
-  ],
-})
+  })
 /**
  * This component represents a detail page for a single collection
  */

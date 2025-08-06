@@ -17,7 +17,5 @@ import { VarDirective } from '../../../../../app/shared/utils/var.directive';
   styleUrls: [],
   // templateUrl: './grant-request-copy.component.html',
   templateUrl: './../../../../../app/request-copy/grant-request-copy/grant-request-copy.component.html',
-  standalone: true,
-  imports: [VarDirective, NgIf, ThemedEmailRequestCopyComponent, FormsModule, ThemedLoadingComponent, AsyncPipe, TranslateModule],
-})
+  })
 export class GrantRequestCopyComponent extends BaseComponent {}

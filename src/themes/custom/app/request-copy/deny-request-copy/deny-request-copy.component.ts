@@ -16,9 +16,7 @@ import { VarDirective } from '../../../../../app/shared/utils/var.directive';
   styleUrls: [],
   // templateUrl: './deny-request-copy.component.html',
   templateUrl: './../../../../../app/request-copy/deny-request-copy/deny-request-copy.component.html',
-  standalone: true,
-  imports: [VarDirective, NgIf, ThemedEmailRequestCopyComponent, ThemedLoadingComponent, AsyncPipe, TranslateModule],
-})
+  })
 export class DenyRequestCopyComponent
   extends BaseComponent {
 }

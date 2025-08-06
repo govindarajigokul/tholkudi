@@ -21,8 +21,6 @@ import { slideMobileNav } from '../../../../app/shared/animations/slide';
   styleUrls: ['./navbar.component.scss'],
   templateUrl: './navbar.component.html',
   animations: [slideMobileNav],
-  standalone: true,
-  imports: [NgbDropdownModule, NgClass, NgIf, ThemedUserMenuComponent, NgFor, NgComponentOutlet, AsyncPipe, TranslateModule],
 })
 export class NavbarComponent extends BaseComponent {
 }

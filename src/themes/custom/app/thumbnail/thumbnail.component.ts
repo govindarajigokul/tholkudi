@@ -13,8 +13,6 @@ import { ThumbnailComponent as BaseComponent } from '../../../../app/thumbnail/t
   styleUrls: ['../../../../app/thumbnail/thumbnail.component.scss'],
   // templateUrl: './thumbnail.component.html',
   templateUrl: '../../../../app/thumbnail/thumbnail.component.html',
-  standalone: true,
-  imports: [VarDirective, CommonModule, ThemedLoadingComponent, TranslateModule, SafeUrlPipe],
-})
+  })
 export class ThumbnailComponent extends BaseComponent {
 }

@@ -24,23 +24,6 @@ import { VarDirective } from '../../../../../app/shared/utils/var.directive';
   templateUrl: '../../../../../app/browse-by/browse-by-taxonomy/browse-by-taxonomy.component.html',
   // styleUrls: ['./browse-by-taxonomy.component.scss'],
   styleUrls: ['../../../../../app/browse-by/browse-by-taxonomy/browse-by-taxonomy.component.scss'],
-  standalone: true,
-  imports: [
-    VarDirective,
-    AsyncPipe,
-    ComcolPageHeaderComponent,
-    ComcolPageLogoComponent,
-    NgIf,
-    ThemedComcolPageHandleComponent,
-    ThemedComcolPageContentComponent,
-    DsoEditMenuComponent,
-    ThemedComcolPageBrowseByComponent,
-    TranslateModule,
-    ThemedLoadingComponent,
-    ThemedBrowseByComponent,
-    VocabularyTreeviewComponent,
-    RouterLink,
-  ],
-})
+  })
 export class BrowseByTaxonomyComponent extends BaseComponent {
 }

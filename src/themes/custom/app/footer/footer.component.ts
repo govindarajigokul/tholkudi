@@ -20,18 +20,16 @@ import {
   APP_CONFIG,
   AppConfig,
 } from '../../../../config/app-config.interface';
-import { NotifyInfoService } from '../../../core/coar-notify/notify-info/notify-info.service';
-import { AuthorizationDataService } from '../../../core/data/feature-authorization/authorization-data.service';
-import { FeatureID } from '../../../core/data/feature-authorization/feature-id';
-import { KlaroService } from '../../../shared/cookies/klaro.service';
-import { hasValue } from '../../../shared/empty.util';
+import { NotifyInfoService } from '../../../../app/core/coar-notify/notify-info/notify-info.service';
+import { AuthorizationDataService } from '../../../../app/core/data/feature-authorization/authorization-data.service';
+import { FeatureID } from '../../../../app/core/data/feature-authorization/feature-id';
+import { KlaroService } from '../../../../app/shared/cookies/klaro.service';
+import { hasValue } from '../../../../app/shared/empty.util';
 
 @Component({
   selector: 'ds-themed-footer',
   styleUrls: ['./footer.component.scss'],
   templateUrl: './footer.component.html',
-  standalone: true,
-  imports: [NgIf, RouterLink, AsyncPipe, DatePipe, TranslateModule],
 })
 export class FooterComponent implements OnInit {
   dateObj: number = Date.now();

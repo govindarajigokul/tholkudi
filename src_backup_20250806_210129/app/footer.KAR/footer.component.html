@@ -1,0 +1,73 @@
+<footer>
+  <div class="container">
+    <div class="row">
+      <!-- Column 1: Tholkudi Logo -->
+      <div class="col-lg-3 col-md-6 mb-3 logo-column">
+        <img src="assets/custom/images/tholkudi-logo.png" alt="Tholkudi Digital Archive" class="footer-logo" />
+      </div>
+
+      <!-- Column 2: Contact Us -->
+      <div class="col-lg-3 col-md-6 mb-3">
+        <h5>Contact Us</h5>
+        <address>
+          The Directorate of Tribal Welfare,<br />
+          1st Floor, Ezhilagam Annex Building,<br />
+          Chepauk, Chennai 600 005<br />
+          Phone: 044 - 28516689<br />
+          Email: <a href="mailto:dir.dtw@tn.gov.in" aria-label="Email the department">
+            dir [dot] dtw [at] tn [dot] gov [dot] in
+          </a>
+        </address>
+      </div>
+
+      <!-- Column 3: More Info -->
+      <div class="col-lg-3 col-md-6 mb-3">
+        <h5>More Info</h5>
+        <ul class="list-unstyled">
+          <li *ngIf="showHelp"><a routerLink="info/help">Help</a></li>
+          <li><a href="#" (click)="showCookieSettings(); $event.preventDefault()">Cookie Settings</a></li>
+          <li *ngIf="showPrivacyPolicy"><a routerLink="info/privacy">Privacy Policy</a></li>
+          <li *ngIf="showEndUserAgreement"><a routerLink="info/end-user-agreement">End User Agreement</a></li>
+          <li *ngIf="showSendFeedback$ | async"><a routerLink="info/feedback">Feedback</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Useful Links -->
+      <div class="col-lg-3 col-md-6 mb-3">
+        <h5>Useful Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="https://tribal.nic.in" target="_blank">Ministry of Tribal Affairs</a></li>
+          <li><a href="https://www.tntribalwelfare.tn.gov.in/" target="_blank">TN Tribal Welfare Department</a></li>
+          <li><a href="https://tntrc.org.in/" target="_blank">Tribal Research Centre, Tamil Nadu</a></li>
+          <li *ngIf="coarLdnEnabled$ | async">
+            <a routerLink="info/coar-notify-support">
+              {{ 'footer.link.coar-notify-support' | translate }}
+            </a>
+          </li>
+        </ul>
+
+        <!-- Social Icons - replaced with black PNG images -->
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook" title="Facebook">
+            <img src="assets/custom/images/black_facebook.png" alt="Facebook" />
+          </a>
+          <a href="#" aria-label="Twitter" title="Twitter">
+            <img src="assets/custom/images/black_twitter.png" alt="Twitter" />
+          </a>
+          <a href="#" aria-label="YouTube" title="YouTube">
+            <img src="assets/custom/images/black_youtube.png" alt="YouTube" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Copyright Section -->
+  <div class="bottom-footer">
+    <div class="container">
+      <small>&copy; Tribal Welfare Department, Government of Tamil Nadu. All rights reserved.</small>
+    </div>
+  </div>
+</footer>
+
+

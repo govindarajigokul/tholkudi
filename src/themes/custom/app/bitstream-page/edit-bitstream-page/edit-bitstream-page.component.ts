@@ -24,19 +24,6 @@ import { ThemedThumbnailComponent } from '../../../../../app/thumbnail/themed-th
   // templateUrl: './edit-bitstream-page.component.html',
   templateUrl: '../../../../../app/bitstream-page/edit-bitstream-page/edit-bitstream-page.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  standalone: true,
-  imports: [
-    FormComponent,
-    NgIf,
-    VarDirective,
-    ThemedThumbnailComponent,
-    AsyncPipe,
-    RouterLink,
-    ErrorComponent,
-    ThemedLoadingComponent,
-    TranslateModule,
-    FileSizePipe,
-  ],
-})
+  })
 export class EditBitstreamPageComponent extends BaseComponent {
 }

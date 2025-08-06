@@ -9,9 +9,7 @@ import { AboutContentComponent } from '../../../../../app/info/about/about-conte
   styleUrls: ['../../../../../app/info/about/about.component.scss'],
   // templateUrl: './about.component.html'
   templateUrl: '../../../../../app/info/about/about.component.html',
-  standalone: true,
-  imports: [AboutContentComponent],
-})
+  })
 
 /**
  * Component displaying the About Statement

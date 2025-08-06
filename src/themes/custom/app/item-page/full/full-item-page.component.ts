@@ -38,26 +38,6 @@ import { ViewTrackerComponent } from '../../../../../app/statistics/angulartics/
   templateUrl: '../../../../../app/item-page/full/full-item-page.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
   animations: [fadeInOut],
-  standalone: true,
-  imports: [
-    ErrorComponent,
-    ThemedLoadingComponent,
-    TranslateModule,
-    ThemedFullFileSectionComponent,
-    CollectionsComponent,
-    ItemVersionsComponent,
-    NgIf,
-    NgForOf,
-    AsyncPipe,
-    KeyValuePipe,
-    RouterLink,
-    ThemedItemPageTitleFieldComponent,
-    DsoEditMenuComponent,
-    ItemVersionsNoticeComponent,
-    ViewTrackerComponent,
-    ThemedItemAlertsComponent,
-    VarDirective,
-  ],
-})
+  })
 export class FullItemPageComponent extends BaseComponent {
 }

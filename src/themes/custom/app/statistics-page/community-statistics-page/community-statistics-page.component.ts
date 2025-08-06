@@ -13,9 +13,7 @@ import { StatisticsTableComponent } from '../../../../../app/statistics-page/sta
   styleUrls: ['../../../../../app/statistics-page/community-statistics-page/community-statistics-page.component.scss'],
   // templateUrl: './community-statistics-page.component.html',
   templateUrl: '../../../../../app/statistics-page/statistics-page/statistics-page.component.html',
-  standalone: true,
-  imports: [CommonModule, VarDirective, ThemedLoadingComponent, StatisticsTableComponent, TranslateModule],
-})
+  })
 
 /**
  * Component representing the statistics page for a community.

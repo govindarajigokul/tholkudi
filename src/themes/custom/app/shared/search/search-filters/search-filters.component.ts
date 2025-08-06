@@ -29,9 +29,7 @@ import { SearchFiltersComponent as BaseComponent } from '../../../../../../app/s
       useClass: SearchConfigurationService,
     },
   ],
-  standalone: true,
-  imports: [SearchFilterComponent, RouterLink, AsyncPipe, TranslateModule, NgxSkeletonLoaderModule],
-})
+  })
 
 export class SearchFiltersComponent extends BaseComponent {
 }

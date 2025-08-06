@@ -1,0 +1,35 @@
+// Import the custom font
+@font-face {
+  font-family: 'Akhand-Bold';
+  src: url('../../../../../assets/fonts/Akhand-Bold-BF642a3156ce54d.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+.tribal-archive-title {
+  font-family: 'Akhand-Bold', Arial, sans-serif;
+  font-size: 1.9rem; // Slightly reduced font size
+  font-weight: bold;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.9);
+  background-color: #6c2c34;
+  padding: 6px 18px; // Further reduced padding for better proportion
+  border-radius: 25px;
+  margin: 0; // Remove default margin
+  display: block;
+  width: fit-content;
+  border: 3px solid #fff4ec;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  letter-spacing: 0.5px;
+  line-height: 1.2; // Better line height for vertical centering
+}
+
+// Ensure the container centers the title properly with vertical spacing
+.tribal-archive-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  margin: 15px 0; // Add controlled vertical spacing
+}

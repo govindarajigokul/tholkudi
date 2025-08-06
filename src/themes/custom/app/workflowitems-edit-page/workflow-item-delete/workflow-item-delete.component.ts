@@ -11,9 +11,7 @@ import { WorkflowItemDeleteComponent as BaseComponent } from '../../../../../app
   // styleUrls: ['workflow-item-delete.component.scss'],
   // templateUrl: './workflow-item-delete.component.html'
   templateUrl: '../../../../../app/workflowitems-edit-page/workflow-item-action-page.component.html',
-  standalone: true,
-  imports: [VarDirective, TranslateModule, CommonModule, ModifyItemOverviewComponent],
-})
+  })
 /**
  * Component representing a page to delete a workflow item
  */

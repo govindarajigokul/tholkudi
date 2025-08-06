@@ -1,0 +1,134 @@
+<header id="main-site-header">
+  <div class="container h-100 d-flex flex-row flex-wrap align-items-center justify-content-between gapx-3 gapy-2" id="main-site-header-container">
+    <!-- Logo and navbar wrapper -->
+    <div id="header-left"
+         [attr.role]="(isMobile$ | async) ? 'navigation' : 'presentation'"
+         [attr.aria-label]="(isMobile$ | async) ? ('nav.main.description' | translate) : null"
+         class="h-100 flex-fill d-flex flex-row flex-nowrap justify-content-start align-items-center gapx-3">
+      <a class="d-block my-2 my-md-0" routerLink="/home" [attr.aria-label]="'home.title' | translate">
+        <img id="header-logo" src="assets/images/dspace-logo.svg" [attr.alt]="'menu.header.image.logo' | translate"/>
+      </a>
+      <!-- Original navbar hidden on desktop since buttons moved to right -->
+      <nav *ngIf="(isMobile$ | async)" class="navbar navbar-expand p-0 align-items-stretch align-self-stretch" id="desktop-navbar" [attr.aria-label]="'nav.main.description' | translate">
+        <ds-navbar></ds-navbar>
+      </nav>
+    </div>
+    <!-- Search bar and navigation buttons -->
+    <div id="header-right" class="h-100 d-flex flex-row flex-nowrap justify-content-end align-items-center ml-auto" style="margin-right: 0; padding-right: 20px;">
+      <!-- Search Icon -->
+      <ds-search-navbar></ds-search-navbar>
+
+      <!-- Navigation Buttons Section (moved from left navbar) -->
+      <div class="nav-buttons-section d-flex align-items-center gap-2" *ngIf="(isMobile$ | async) !== true">
+
+        <!-- About us Button (with dropdown) -->
+        <div class="nav-button-wrapper">
+          <div ngbDropdown #aboutDropdown="ngbDropdown" display="dynamic" placement="bottom-right" class="d-inline-block">
+            <a href="javascript:void(0);" class="nav-button"
+               [attr.aria-label]="'About us'"
+               (click)="$event.preventDefault()"
+               role="menuitem"
+               aria-haspopup="menu"
+               ngbDropdownToggle>
+              About us
+              <i class="fas fa-chevron-down ms-2"></i>
+            </a>
+            <div ngbDropdownMenu role="menu" class="dropdown-menu">
+              <a class="dropdown-item" href="/browse/author">By Author</a>
+              <a class="dropdown-item" href="/browse/language">By Language</a>
+              <a class="dropdown-item" href="/browse/media">By Media</a>
+              <a class="dropdown-item" href="/browse/linguistictype">By Linguistic Data Type</a>
+              <a class="dropdown-item" href="/browse/dateissued">By Issue Date</a>
+              <a class="dropdown-item" href="/browse/subject">By Subject</a>
+              <a class="dropdown-item" href="/browse/srsc">By Subject Category</a>
+              <a class="dropdown-item" href="/browse/nsi">By Norwegian Science Index</a>
+              <a class="dropdown-item" href="/browse/title">By Title</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tamil Nadu Tribes Button (simple link) -->
+        <div class="nav-button-wrapper">
+          <a href="/community-list" class="nav-button"
+             [attr.aria-label]="'Tamil Nadu Tribes'"
+             role="menuitem">
+            Tamil Nadu Tribes
+          </a>
+        </div>
+
+        <!-- Login and Language Buttons (separate but connected) -->
+        <div class="nav-button-wrapper login-lang-wrapper">
+
+          <!-- Login Button -->
+          <div class="login-button-section">
+            <div ngbDropdown #loginDropdown="ngbDropdown" display="dynamic" placement="bottom-right" class="d-inline-block">
+              <a href="javascript:void(0);" class="nav-button login-button"
+                 [attr.aria-label]="'Login'"
+                 (click)="$event.preventDefault()"
+                 role="menuitem"
+                 aria-haspopup="menu"
+                 ngbDropdownToggle>
+                <i class="fas fa-user me-2"></i>
+                Login
+                <i class="fas fa-chevron-down ms-2"></i>
+              </a>
+              <div ngbDropdownMenu role="menu" class="dropdown-menu login-dropdown">
+                <!-- Login Section -->
+                <div class="login-dropdown-section" *ngIf="(isAuthenticated$ | async) !== true">
+                  <ds-log-in [isStandalonePage]="false"></ds-log-in>
+                </div>
+
+                <!-- User Menu when logged in -->
+                <div class="user-dropdown-section" *ngIf="(isAuthenticated$ | async)">
+                  <ds-user-menu [inExpandableNavbar]="false"></ds-user-menu>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Language Button -->
+          <div class="language-button-section" *ngIf="moreThanOneLanguage">
+            <div ngbDropdown #languageDropdown="ngbDropdown" display="dynamic" placement="bottom-right" class="d-inline-block">
+              <a href="javascript:void(0);" class="nav-button language-button"
+                 [attr.aria-label]="'Language'"
+                 (click)="$event.preventDefault()"
+                 role="menuitem"
+                 aria-haspopup="menu"
+                 ngbDropdownToggle>
+                English / தமிழ்
+                <i class="fas fa-chevron-down ms-1"></i>
+              </a>
+              <div ngbDropdownMenu role="menu" class="dropdown-menu language-dropdown">
+                <a class="dropdown-item"
+                   *ngFor="let lang of translate.getLangs()"
+                   href="javascript:void(0);"
+                   (click)="useLang(lang)"
+                   [class.active]="lang === translate.currentLang">
+                  {{ langLabel(lang) }}
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Mobile auth menu fallback -->
+      <div role="menubar" class="h-100 d-flex flex-row flex-nowrap align-items-center gapx-1" *ngIf="(isMobile$ | async)">
+        <ds-auth-nav-menu></ds-auth-nav-menu>
+        <ds-lang-switch></ds-lang-switch>
+        <ds-context-help-toggle></ds-context-help-toggle>
+        <ds-impersonate-navbar></ds-impersonate-navbar>
+      </div>
+
+      <div id="mobile-navbar-toggler" class="d-block d-lg-none ml-3" *ngIf="(isMobile$ | async)">
+        <button id="navbar-toggler" class="btn" type="button" (click)="toggleNavbar()"
+                [attr.aria-label]="'nav.toggle' | translate" aria-controls="collapsible-mobile-navbar" [attr.aria-expanded]="(isNavBarCollapsed$ | async) !== true">
+          <span class="fas fa-bars fa-fw fa-xl toggler-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+</header>

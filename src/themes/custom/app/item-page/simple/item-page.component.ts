@@ -34,23 +34,7 @@ import { ViewTrackerComponent } from '../../../../../app/statistics/angulartics/
   templateUrl: '../../../../../app/item-page/simple/item-page.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
   animations: [fadeInOut],
-  standalone: true,
-  imports: [
-    VarDirective,
-    ThemedItemAlertsComponent,
-    ItemVersionsNoticeComponent,
-    ViewTrackerComponent,
-    ListableObjectComponentLoaderComponent,
-    ItemVersionsComponent,
-    ErrorComponent,
-    ThemedLoadingComponent,
-    TranslateModule,
-    AsyncPipe,
-    NgIf,
-    NotifyRequestsStatusComponent,
-    QaEventNotificationComponent,
-  ],
-})
+  })
 export class ItemPageComponent extends BaseComponent {
 
 }

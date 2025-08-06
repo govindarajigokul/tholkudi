@@ -12,10 +12,6 @@ import { SubmissionFormComponent } from '../../../../../app/submission/form/subm
   styleUrls: ['../../../../../app/submission/edit/submission-edit.component.scss'],
   // templateUrl: './submission-edit.component.html'
   templateUrl: '../../../../../app/submission/edit/submission-edit.component.html',
-  standalone: true,
-  imports: [
-    SubmissionFormComponent,
-  ],
-})
+  })
 export class SubmissionEditComponent extends BaseComponent {
 }

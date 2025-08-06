@@ -5,9 +5,7 @@ import { CommonModule } from '@angular/common';
   selector: 'ds-themed-home-news',
   styleUrls: ['./home-news.component.scss'],
   templateUrl: './home-news.component.html',
-  standalone: true,
-  imports: [CommonModule],
-})
+  })
 
 /**
  * Component to render the news section on the home page

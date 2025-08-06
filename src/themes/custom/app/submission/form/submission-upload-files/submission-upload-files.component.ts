@@ -8,11 +8,6 @@ import { SubmissionUploadFilesComponent as BaseComponent } from '../../../../../
   selector: 'ds-themed-submission-upload-files',
   // templateUrl: './submission-upload-files.component.html',
   templateUrl: '../../../../../../app/submission/form/submission-upload-files/submission-upload-files.component.html',
-  imports: [
-    UploaderComponent,
-    NgIf,
-  ],
-  standalone: true,
-})
+  })
 export class SubmissionUploadFilesComponent extends BaseComponent {
 }

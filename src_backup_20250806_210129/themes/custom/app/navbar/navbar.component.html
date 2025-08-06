@@ -1,0 +1,20 @@
+<!-- Only show mobile user menu when needed, hide the main navigation -->
+<nav [ngClass]="{'open': (menuCollapsed | async) !== true}"
+     [@slideMobileNav]="(windowService.isXsOrSm() | async) !== true ? 'default' : ((menuCollapsed | async) ? 'collapsed' : 'expanded')"
+     class="navbar navbar-light navbar-expand-md px-md-0 pt-md-0 pt-3 navbar-container" role="navigation"
+     [attr.aria-label]="'nav.main.description' | translate" id="main-navbar">
+  <div class="navbar-inner-container w-100" [class.container]="(isMobile$ | async) !== true">
+    <div class="w-100">
+      <div id="collapsingNav">
+        <!-- Keep mobile user menu for mobile devices -->
+        <ng-container *ngIf="(isMobile$ | async) && (isAuthenticated$ | async)">
+          <ds-user-menu [inExpandableNavbar]="true"></ds-user-menu>
+        </ng-container>
+        <!-- Hide the main navigation section since we moved it to header -->
+        <!-- <div class="navbar-nav align-items-md-center mr-auto shadow-none gapx-3"> -->
+        <!--   Navigation items removed - now in header -->
+        <!-- </div> -->
+      </div>
+    </div>
+  </div>
+</nav>

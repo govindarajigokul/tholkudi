@@ -16,9 +16,7 @@ import { ThemedSearchComponent } from '../../../../app/shared/search/themed-sear
       useClass: SearchConfigurationService,
     },
   ],
-  standalone: true,
-  imports: [ThemedSearchComponent],
-})
+  })
 /**
  * This component represents the whole search page
  * It renders search results depending on the current search options

@@ -15,9 +15,7 @@ import { BtnDisabledDirective } from '../../../../../app/shared/btn-disabled.dir
   styleUrls: [],
   // templateUrl: './email-request-copy.component.html',
   templateUrl: './../../../../../app/request-copy/email-request-copy/email-request-copy.component.html',
-  standalone: true,
-  imports: [FormsModule, NgClass, NgIf, TranslateModule, BtnDisabledDirective],
-})
+  })
 export class EmailRequestCopyComponent
   extends BaseComponent {
 }
