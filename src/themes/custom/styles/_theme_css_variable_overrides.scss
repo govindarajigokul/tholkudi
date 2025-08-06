@@ -1,6 +1,9 @@
 // Override or add CSS variables for your theme here
 
 :root {
+  // Background color override
+  --ds-body-bg: #f8f4ec; // New background color as requested
+
   //--ds-header-logo-height: 80px;
   //--ds-header-logo-height-xs: 50px;
   //--ds-header-icon-color: #{$link-color};

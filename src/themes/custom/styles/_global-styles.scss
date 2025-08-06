@@ -2,3 +2,19 @@
 
 // imports the base global style
 @import '../../../styles/_global-styles.scss';
+
+// Custom overrides for the theme
+:root {
+  --ds-body-bg: #f8f4ec; // New background color as requested
+}
+
+// Override the my-cs class to remove margin-top
+.my-cs {
+  margin-top: 0 !important; // Remove the margin-top
+  margin-bottom: var(--ds-content-spacing); // Keep margin-bottom
+}
+
+// Ensure the new background color is applied to all key areas
+html, body, main, app-root, ds-themed-page, ds-community-search, ds-home-news {
+  background-color: #f8f4ec !important;
+}
