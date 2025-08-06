@@ -50,7 +50,7 @@ header {
 
     // No hover styles as requested
 
-    // Style the login text to have white background
+    // Style the login text to have white background (now first position)
     ::ng-deep ds-auth-nav-menu {
       .btn, .dropdown-toggle, a {
         background-color: white !important;
@@ -69,7 +69,7 @@ header {
       }
     }
 
-    // Style language switcher to blend with the background
+    // Style language switcher to blend with the background (now last position)
     ::ng-deep ds-lang-switch {
       .btn, .dropdown-toggle, a {
         background-color: transparent !important;
