@@ -1,0 +1,67 @@
+<header>
+  <div class="container">
+    <div class="d-flex flex-row justify-content-between align-items-center">
+      <!-- Left section: Logo only -->
+      <a class="navbar-brand my-2" routerLink="/home">
+        <img src="assets/images/dspace-logo.svg" [attr.alt]="'menu.header.image.logo' | translate"/>
+      </a>
+
+      <!-- Right section: Navigation + User controls all in one row -->
+      <nav role="navigation" [attr.aria-label]="'nav.user.description' | translate"
+           class="navbar navbar-light navbar-expand-md flex-shrink-0 px-0 d-flex align-items-center">
+
+        <!-- Navigation buttons -->
+        <div class="d-flex align-items-center me-3">
+          <!-- Tamil Nadu Tribes Button (simple link) -->
+          <a routerLink="/community-list" class="nav-button me-2"
+             [attr.aria-label]="'menu.section.browse_global_communities_and_collections' | translate"
+             role="menuitem">
+            {{ 'menu.section.browse_global_communities_and_collections' | translate }}
+          </a>
+
+          <!-- About us Button (with dropdown) -->
+          <div ngbDropdown #aboutDropdown="ngbDropdown" display="dynamic" placement="bottom-right" class="d-inline-block">
+            <a href="javascript:void(0);" class="nav-button"
+               [attr.aria-label]="'menu.section.browse_global' | translate"
+               (click)="$event.preventDefault()"
+               role="menuitem"
+               aria-haspopup="menu"
+               ngbDropdownToggle>
+              {{ 'menu.section.browse_global' | translate }}
+              <i class="fas fa-chevron-down ms-2"></i>
+            </a>
+            <div ngbDropdownMenu role="menu" class="dropdown-menu">
+              <a class="dropdown-item" routerLink="/browse/author">{{ 'menu.section.browse_global_by_author' | translate }}</a>
+              <a class="dropdown-item" routerLink="/browse/language">{{ 'menu.section.browse_global_by_language' | translate }}</a>
+              <a class="dropdown-item" routerLink="/browse/media">{{ 'menu.section.browse_global_by_media' | translate }}</a>
+              <a class="dropdown-item" routerLink="/browse/linguistictype">{{ 'menu.section.browse_global_by_linguistictype' | translate }}</a>
+              <a class="dropdown-item" routerLink="/browse/dateissued">{{ 'menu.section.browse_global_by_dateissued' | translate }}</a>
+              <a class="dropdown-item" routerLink="/browse/subject">{{ 'menu.section.browse_global_by_subject' | translate }}</a>
+              <a class="dropdown-item" routerLink="/browse/srsc">{{ 'menu.section.browse_global_by_srsc' | translate }}</a>
+              <a class="dropdown-item" routerLink="/browse/nsi">{{ 'menu.section.browse_global_by_nsi' | translate }}</a>
+              <a class="dropdown-item" routerLink="/browse/title">{{ 'menu.section.browse_global_by_title' | translate }}</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- User controls -->
+        <div class="d-flex align-items-center">
+          <ds-search-navbar></ds-search-navbar>
+          <ds-lang-switch></ds-lang-switch>
+          <ds-context-help-toggle></ds-context-help-toggle>
+          <ds-auth-nav-menu></ds-auth-nav-menu>
+          <ds-impersonate-navbar></ds-impersonate-navbar>
+        </div>
+
+        <!-- Mobile toggle button -->
+        <div *ngIf="isMobile$ | async" class="pl-2">
+          <button class="navbar-toggler px-0" type="button" (click)="toggleNavbar()"
+                  aria-controls="collapsingNav"
+                  aria-expanded="false" [attr.aria-label]="'nav.toggle' | translate">
+            <span class="fas fa-bars fa-fw toggler-icon" aria-hidden="true"></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
