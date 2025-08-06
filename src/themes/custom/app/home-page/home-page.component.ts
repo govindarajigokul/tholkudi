@@ -5,6 +5,7 @@ import {
   NgTemplateOutlet,
 } from '@angular/common';
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 
 import { HomeCoarComponent } from '../../../../app/home-page/home-coar/home-coar.component';
@@ -23,7 +24,7 @@ import { ViewTrackerComponent } from '../../../../app/statistics/angulartics/dsp
   styleUrls: ['./home-page.component.scss'],
   templateUrl: './home-page.component.html',
   standalone: true,
-  imports: [ThemedHomeNewsComponent, NgTemplateOutlet, NgIf, ViewTrackerComponent, ThemedSearchFormComponent, ThemedTopLevelCommunityListComponent, RecentItemListComponent, AsyncPipe, TranslateModule, NgClass, SuggestionsPopupComponent, ThemedConfigurationSearchPageComponent, PageWithSidebarComponent],
+  imports: [ThemedHomeNewsComponent, NgTemplateOutlet, NgIf, ViewTrackerComponent, ThemedSearchFormComponent, ThemedTopLevelCommunityListComponent, RecentItemListComponent, AsyncPipe, TranslateModule, NgClass, SuggestionsPopupComponent, ThemedConfigurationSearchPageComponent, PageWithSidebarComponent, RouterLink],
 })
 export class HomePageComponent extends BaseComponent {
 

@@ -25,6 +25,9 @@
       flex: 1;
       min-width: 120px;
       max-width: 150px;
+      cursor: pointer;
+      position: relative;
+      z-index: 1;
 
       &:hover {
         transform: translateY(-5px);
@@ -33,12 +36,18 @@
         color: #2b4878;
       }
 
+      &:focus {
+        outline: 2px solid #2b4878;
+        outline-offset: 2px;
+      }
+
       img {
         width: 60px;
         height: 60px;
         object-fit: contain;
         margin-bottom: 0.8rem;
         transition: transform 0.3s ease;
+        pointer-events: none; // Ensure clicks pass through to the link
       }
 
       &:hover img {
