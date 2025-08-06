@@ -56,39 +56,49 @@
           </a>
         </div>
 
-        <!-- Login/Language Combined Button -->
-        <div class="nav-button-wrapper">
-          <div ngbDropdown #loginLangDropdown="ngbDropdown" display="dynamic" placement="bottom-right" class="d-inline-block">
-            <a href="javascript:void(0);" class="nav-button login-lang-button"
-               [attr.aria-label]="'Login and Language'"
-               (click)="$event.preventDefault()"
-               role="menuitem"
-               aria-haspopup="menu"
-               ngbDropdownToggle>
-              <i class="fas fa-user me-2"></i>
-              Login
-              <span class="lang-text ms-2">English / தமிழ்</span>
-              <i class="fas fa-chevron-down ms-2"></i>
-            </a>
-            <div ngbDropdownMenu role="menu" class="dropdown-menu login-lang-dropdown">
-              <!-- Login Section -->
-              <div class="login-dropdown-section" *ngIf="(isAuthenticated$ | async) !== true">
-                <h6 class="dropdown-header">Login</h6>
-                <div class="px-3">
+        <!-- Login and Language Buttons (separate but connected) -->
+        <div class="nav-button-wrapper login-lang-wrapper">
+
+          <!-- Login Button -->
+          <div class="login-button-section">
+            <div ngbDropdown #loginDropdown="ngbDropdown" display="dynamic" placement="bottom-right" class="d-inline-block">
+              <a href="javascript:void(0);" class="nav-button login-button"
+                 [attr.aria-label]="'Login'"
+                 (click)="$event.preventDefault()"
+                 role="menuitem"
+                 aria-haspopup="menu"
+                 ngbDropdownToggle>
+                <i class="fas fa-user me-2"></i>
+                Login
+                <i class="fas fa-chevron-down ms-2"></i>
+              </a>
+              <div ngbDropdownMenu role="menu" class="dropdown-menu login-dropdown">
+                <!-- Login Section -->
+                <div class="login-dropdown-section" *ngIf="(isAuthenticated$ | async) !== true">
                   <ds-log-in [isStandalonePage]="false"></ds-log-in>
                 </div>
-                <div class="dropdown-divider"></div>
-              </div>
 
-              <!-- User Menu when logged in -->
-              <div class="user-dropdown-section" *ngIf="(isAuthenticated$ | async)">
-                <ds-user-menu [inExpandableNavbar]="false"></ds-user-menu>
-                <div class="dropdown-divider"></div>
+                <!-- User Menu when logged in -->
+                <div class="user-dropdown-section" *ngIf="(isAuthenticated$ | async)">
+                  <ds-user-menu [inExpandableNavbar]="false"></ds-user-menu>
+                </div>
               </div>
+            </div>
+          </div>
 
-              <!-- Language Section -->
-              <div class="language-dropdown-section" *ngIf="moreThanOneLanguage">
-                <h6 class="dropdown-header">Language</h6>
+          <!-- Language Button -->
+          <div class="language-button-section" *ngIf="moreThanOneLanguage">
+            <div ngbDropdown #languageDropdown="ngbDropdown" display="dynamic" placement="bottom-right" class="d-inline-block">
+              <a href="javascript:void(0);" class="nav-button language-button"
+                 [attr.aria-label]="'Language'"
+                 (click)="$event.preventDefault()"
+                 role="menuitem"
+                 aria-haspopup="menu"
+                 ngbDropdownToggle>
+                English / தமிழ்
+                <i class="fas fa-chevron-down ms-1"></i>
+              </a>
+              <div ngbDropdownMenu role="menu" class="dropdown-menu language-dropdown">
                 <a class="dropdown-item"
                    *ngFor="let lang of translate.getLangs()"
                    href="javascript:void(0);"
@@ -99,6 +109,7 @@
               </div>
             </div>
           </div>
+
         </div>
 
       </div>

@@ -132,16 +132,41 @@
           text-decoration: none;
         }
 
-        // Special styling for login-language combined button
-        &.login-lang-button {
-          .lang-text {
-            font-size: 12px;
-            opacity: 0.9;
+        i {
+          font-size: 12px;
+        }
+      }
+
+      // Special styling for connected login-language wrapper
+      &.login-lang-wrapper {
+        display: flex;
+        background-color: #4a6fa5;
+        border-radius: 20px;
+        padding: 2px;
+        gap: 0;
+
+        .login-button-section, .language-button-section {
+          .nav-button {
+            background-color: transparent;
+            border-radius: 18px;
+            margin: 0;
+            padding: 8px 14px;
+
+            &:hover, &:focus {
+              background-color: rgba(255, 255, 255, 0.1);
+            }
           }
         }
 
-        i {
-          font-size: 12px;
+        // Add separator between login and language
+        .language-button-section {
+          border-left: 1px solid rgba(255, 255, 255, 0.3);
+          margin-left: 2px;
+          padding-left: 2px;
+
+          .nav-button {
+            font-size: 13px;
+          }
         }
       }
     }
