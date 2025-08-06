@@ -1,0 +1,20 @@
+<!-- Skip to main content button removed as requested -->
+
+<div class="outer-wrapper" [class.d-none]="shouldShowFullscreenLoader" [ngClass]="browserOsClasses.asObservable() | async" [@slideSidebarPadding]="{
+     value: ((isSidebarVisible$ | async) !== true ? 'hidden' : (slideSidebarOver$ | async) ? 'unpinned' : 'pinned'),
+     params: { collapsedWidth: (collapsedSidebarWidth$ | async), expandedWidth: (expandedSidebarWidth$ | async) }
+    }">
+  <ds-admin-sidebar [expandedSidebarWidth$]="expandedSidebarWidth$" [collapsedSidebarWidth$]="collapsedSidebarWidth$"></ds-admin-sidebar>
+  <div class="inner-wrapper">
+    <ds-system-wide-alert-banner></ds-system-wide-alert-banner>
+    <ds-header-navbar-wrapper></ds-header-navbar-wrapper>
+    <ds-breadcrumbs></ds-breadcrumbs>
+    <main class="my-cs" id="main-content">
+      <ds-loading *ngIf="shouldShowRouteLoader" class="ds-loading-overlay"></ds-loading>
+      <router-outlet></router-outlet>
+    </main>
+    <ds-footer></ds-footer>
+  </div>
+</div>
+<ds-notifications-board></ds-notifications-board>
+<ds-live-region></ds-live-region>
