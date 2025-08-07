@@ -3519,4 +3519,20 @@
   "home.news.description": "சமீபத்திய செய்திகள் மற்றும் அறிவிப்புகளுடன் புதுப்பித்த நிலையில் இருங்கள்.",
   "home-news-test": "இது செய்திப் பிரிவுக்கான ஒரு உதவிக்குறிப்பு.",
   "submission.title_field_tooltip": "தலைப்பின் மாற்று பெயர், தலைப்பின் மொழியிலல்லாத ஒரு மொழியில் இருக்கலாம். அது மொழிபெயர்க்கப்பட்ட தலைப்பாகவோ அல்லது எழுத்துமாற்றம் செய்யப்பட்ட தலைப்பாகவோ இருக்கலாம்.",
+
+  // Additional missing translations from user reference document
+  "community.sub-communities-collections": "துணைச் சமூகங்கள் - தரவுகள்",
+  "item.page.full-item-page": "முழுப் பக்கம்",
+  "header.all-tholkudi": "தொல்குடிக் களஞ்சியம்",
+  "header.browse-tholkudi": "களஞ்சியத்தில் உலவ",
+  "login.new-user": "புதிய பயனாளர்",
+  "login.forgotten-password": "கடவுச் சொல்லை மாற்ற",
+  "community.communities-tholkudi": "தொல்குடிச் சமூகங்கள்",
+  "community.select-community": "சேகரிப்புகள்",
+  "pagination.now-showing": "காட்சி",
+  "search.filters.reset-all": "வடிகட்டிகளை மீட்டமைக்கவும்",
+  "footer.ministry-tribal": "பழங்குடிகள் அமைச்சகம்",
+  "footer.tribal-research": "பழங்குடிகள் ஆய்வு மையம், தமிழ்நாடு",
+  "footer.more-info": "மேலதிக தகவல்களைப் பெற",
+  "footer.useful-links": "தொடர்புடைய இணைப்புகள்"
 }
