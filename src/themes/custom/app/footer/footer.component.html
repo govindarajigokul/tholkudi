@@ -10,13 +10,13 @@
 
       <!-- Column 2: Contact Us -->
       <div class="col-lg-3 col-md-6 mb-3">
-        <h5><span class="first-word">Contact</span> Us</h5>
+        <h5><span class="first-word">{{ 'footer.contact' | translate }}</span> {{ 'footer.us' | translate }}</h5>
         <address>
-          The Directorate of Tribal Welfare,<br />
-          1st Floor, Ezhilagam Annex Building,<br />
-          Chepauk, Chennai 600 005<br />
-          Phone: 044 - 28516689<br />
-          Email: <a href="mailto:dir.dtw@tn.gov.in" aria-label="Email the department">
+          {{ 'footer.address.line1' | translate }}<br />
+          {{ 'footer.address.line2' | translate }}<br />
+          {{ 'footer.address.line3' | translate }}<br />
+          {{ 'footer.phone' | translate }}: 044 - 28516689<br />
+          {{ 'footer.email' | translate }}: <a href="mailto:dir.dtw@tn.gov.in" aria-label="Email the department">
             dir [dot] dtw [at] tn [dot] gov [dot] in
           </a>
         </address>
@@ -24,23 +24,23 @@
 
       <!-- Column 3: More Info -->
       <div class="col-lg-3 col-md-6 mb-3">
-        <h5><span class="first-word">More</span> Info</h5>
+        <h5><span class="first-word">{{ 'footer.more' | translate }}</span> {{ 'footer.info' | translate }}</h5>
         <ul class="list-unstyled">
-          <li *ngIf="showHelp"><a routerLink="info/help">Help</a></li>
-          <li><a href="#" (click)="showCookieSettings(); $event.preventDefault()">Cookie Settings</a></li>
-          <li *ngIf="showPrivacyPolicy"><a routerLink="info/privacy">Privacy Policy</a></li>
-          <li *ngIf="showEndUserAgreement"><a routerLink="info/end-user-agreement">End User Agreement</a></li>
-          <li *ngIf="showSendFeedback$ | async"><a routerLink="info/feedback">Feedback</a></li>
+          <li *ngIf="showHelp"><a routerLink="info/help">{{ 'footer.link.help' | translate }}</a></li>
+          <li><a href="#" (click)="showCookieSettings(); $event.preventDefault()">{{ 'footer.link.cookies' | translate }}</a></li>
+          <li *ngIf="showPrivacyPolicy"><a routerLink="info/privacy">{{ 'footer.link.privacy-policy' | translate }}</a></li>
+          <li *ngIf="showEndUserAgreement"><a routerLink="info/end-user-agreement">{{ 'footer.link.end-user-agreement' | translate }}</a></li>
+          <li *ngIf="showSendFeedback$ | async"><a routerLink="info/feedback">{{ 'footer.link.feedback' | translate }}</a></li>
         </ul>
       </div>
 
       <!-- Column 4: Useful Links -->
       <div class="col-lg-3 col-md-6 mb-3">
-        <h5><span class="first-word">Useful</span> Links</h5>
+        <h5><span class="first-word">{{ 'footer.useful' | translate }}</span> {{ 'footer.links' | translate }}</h5>
         <ul class="list-unstyled">
-          <li><a href="https://tribal.nic.in" target="_blank">Ministry of Tribal Affairs</a></li>
-          <li><a href="https://www.tntribalwelfare.tn.gov.in/" target="_blank">TN Tribal Welfare Department</a></li>
-          <li><a href="https://tntrc.org.in/" target="_blank">Tribal Research Centre, Tamil Nadu</a></li>
+          <li><a href="https://tribal.nic.in" target="_blank">{{ 'footer.ministry-tribal' | translate }}</a></li>
+          <li><a href="https://www.tntribalwelfare.tn.gov.in/" target="_blank">{{ 'footer.tribal-welfare' | translate }}</a></li>
+          <li><a href="https://tntrc.org.in/" target="_blank">{{ 'footer.tribal-research' | translate }}</a></li>
           <li *ngIf="coarLdnEnabled$ | async">
             <a routerLink="info/coar-notify-support">
               {{ 'footer.link.coar-notify-support' | translate }}
@@ -67,7 +67,7 @@
   <!-- Copyright Section -->
   <div class="bottom-footer">
     <div class="container">
-      <small>&copy; Tribal Welfare Department, Government of Tamil Nadu. All rights reserved.</small>
+      <small>&copy; {{ 'footer.copyright.text' | translate }}</small>
     </div>
   </div>
 </footer>

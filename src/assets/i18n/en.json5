@@ -3519,5 +3519,20 @@
   "home.news.description": "Stay updated with the latest news and announcements.",
   "home-news-test": "This is a tooltip for the news section.",
   "submission.title_field_tooltip": "The alternative title in be a language other than the language of the title.  It can be translated title or transliterated title",
-  "header.about-us": "About Us"
+  "header.about-us": "About Us",
+  "footer.contact": "Contact",
+  "footer.us": "Us",
+  "footer.more": "More",
+  "footer.info": "Info",
+  "footer.useful": "Useful",
+  "footer.links": "Links",
+  "footer.address.line1": "The Directorate of Tribal Welfare",
+  "footer.address.line2": "1st Floor, Ezhilagam Annex Building",
+  "footer.address.line3": "Chepauk, Chennai 600 005",
+  "footer.phone": "Phone",
+  "footer.email": "Email",
+  "footer.tribal-welfare": "TN Tribal Welfare Department",
+  "footer.ministry-tribal": "Ministry of Tribal Affairs",
+  "footer.tribal-research": "Tribal Research Centre, Tamil Nadu",
+  "footer.copyright.text": "Tribal Welfare Department, Government of Tamil Nadu. All rights reserved."
 }
