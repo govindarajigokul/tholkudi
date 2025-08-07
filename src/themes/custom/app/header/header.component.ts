@@ -25,4 +25,21 @@ import { ImpersonateNavbarComponent } from '../../../../app/shared/impersonate-n
   imports: [RouterLink, ThemedLangSwitchComponent, NgbDropdownModule, ThemedSearchNavbarComponent, ContextHelpToggleComponent, ThemedAuthNavMenuComponent, ImpersonateNavbarComponent, TranslateModule, AsyncPipe, NgIf],
 })
 export class HeaderComponent extends BaseComponent {
+
+  // Mobile menu state
+  isMobileMenuOpen = false;
+
+  /**
+   * Toggle mobile menu visibility
+   */
+  toggleMobileMenu(): void {
+    this.isMobileMenuOpen = !this.isMobileMenuOpen;
+  }
+
+  /**
+   * Close mobile menu
+   */
+  closeMobileMenu(): void {
+    this.isMobileMenuOpen = false;
+  }
 }

@@ -145,6 +145,229 @@ header {
     margin-right: 1rem !important;
   }
 
+  // Mobile language switch (left of hamburger)
+  .mobile-lang-switch {
+    ::ng-deep .btn {
+      background-color: #229daf;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      padding: 6px 12px;
+      font-family: 'Akhand-Bold', Arial, sans-serif;
+      font-weight: bold;
+      font-size: 12px;
+
+      &:hover {
+        background-color: #1a7a87;
+      }
+    }
+
+    ::ng-deep .dropdown-menu {
+      border-radius: 8px;
+      margin-top: 0.25rem;
+    }
+  }
+
+  // Mobile hamburger menu styles
+  .navbar-toggler {
+    border: none;
+    padding: 4px 8px;
+    background-color: #2b4878;
+    border-radius: 4px;
+
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 0.2rem rgba(43, 72, 120, 0.25);
+    }
+  }
+
+  // Mobile navigation collapse
+  .mobile-nav-collapse {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+
+    &.show {
+      max-height: 500px;
+    }
+  }
+
+  .mobile-nav-content {
+    padding: 1rem;
+  }
+
+  .mobile-nav-section {
+    margin-bottom: 1.5rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    // Ensure ALL elements in navigation section have same styling
+    a, button, .btn, .nav-link, .dropdown-toggle {
+      display: block !important;
+      color: #2b4878 !important;
+      font-family: 'Akhand-Bold', Arial, sans-serif !important;
+      font-weight: 600 !important;
+      font-size: 16px !important;
+      padding: 0.75rem 1rem !important;
+      border-bottom: 1px solid #eee !important;
+      text-decoration: none !important;
+      background: transparent !important;
+      border-left: none !important;
+      border-right: none !important;
+      border-top: none !important;
+      border-radius: 0 !important;
+      margin: 0 !important;
+      width: 100% !important;
+      text-align: left !important;
+      transition: all 0.3s ease !important;
+      box-shadow: none !important;
+
+      &:hover, &:focus, &:active {
+        background-color: #f8f9fa !important;
+        color: #1a2d4a !important;
+        text-decoration: none !important;
+        border-color: #eee !important;
+        box-shadow: none !important;
+      }
+
+      &::after {
+        display: none !important; // Hide any dropdown arrows
+      }
+    }
+  }
+
+  .mobile-nav-link {
+    display: block !important;
+    color: #2b4878 !important;
+    font-family: 'Akhand-Bold', Arial, sans-serif !important;
+    font-weight: 600 !important;
+    font-size: 16px !important;
+    padding: 0.75rem 1rem !important;
+    border-bottom: 1px solid #eee !important;
+    text-decoration: none !important;
+    background: transparent !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    text-align: left !important;
+    transition: all 0.3s ease !important;
+
+    &:hover, &:focus, &:active {
+      background-color: #f8f9fa !important;
+      color: #1a2d4a !important;
+      text-decoration: none !important;
+    }
+
+    &:last-child {
+      border-bottom: none !important;
+    }
+  }
+
+  // Mobile auth navigation wrapper - style login EXACTLY like nav links
+  .mobile-auth-nav-wrapper {
+    .mobile-auth-nav {
+      // Force all auth menu elements to look like navigation links
+      ::ng-deep .btn,
+      ::ng-deep .nav-link,
+      ::ng-deep a,
+      ::ng-deep button,
+      ::ng-deep .dropdown-toggle {
+        display: block !important;
+        color: #2b4878 !important;
+        font-family: 'Akhand-Bold', Arial, sans-serif !important;
+        font-weight: 600 !important;
+        font-size: 16px !important;
+        padding: 0.75rem 1rem !important;
+        border-bottom: 1px solid #eee !important;
+        text-decoration: none !important;
+        background: transparent !important;
+        border: none !important;
+        border-bottom: 1px solid #eee !important;
+        border-radius: 0 !important;
+        width: 100% !important;
+        text-align: left !important;
+        transition: all 0.3s ease !important;
+        margin: 0 !important;
+        box-shadow: none !important;
+
+        &:hover, &:focus, &:active {
+          background-color: #f8f9fa !important;
+          color: #1a2d4a !important;
+          border-color: #eee !important;
+          box-shadow: none !important;
+        }
+
+        &::after {
+          display: none !important; // Hide dropdown arrow
+        }
+      }
+
+      // Style dropdown menu items to match nav links
+      ::ng-deep .dropdown-menu {
+        width: 100% !important;
+        border-radius: 0 !important;
+        margin-top: 0 !important;
+        border: none !important;
+        box-shadow: none !important;
+        background: transparent !important;
+        padding: 0 !important;
+        position: static !important;
+
+        .dropdown-item {
+          color: #2b4878 !important;
+          font-family: 'Akhand-Bold', Arial, sans-serif !important;
+          font-weight: 600 !important;
+          font-size: 16px !important;
+          padding: 0.75rem 1rem !important;
+          border-bottom: 1px solid #eee !important;
+          background: transparent !important;
+          border-radius: 0 !important;
+
+          &:hover, &:focus, &:active {
+            background-color: #f8f9fa !important;
+            color: #1a2d4a !important;
+          }
+
+          &:last-child {
+            border-bottom: none !important;
+          }
+        }
+      }
+
+      // Remove any bootstrap styling
+      ::ng-deep .btn-outline-primary,
+      ::ng-deep .btn-primary,
+      ::ng-deep .btn-secondary {
+        background: transparent !important;
+        border: none !important;
+        border-bottom: 1px solid #eee !important;
+        color: #2b4878 !important;
+      }
+    }
+  }
+
+  // Other mobile controls styling
+  .mobile-other-controls {
+    border-top: 1px solid #eee;
+    padding-top: 1rem;
+    margin-top: 1rem;
+  }
+
   // Responsive adjustments
   @media (max-width: 768px) {
     .d-flex.align-items-center {
