@@ -9,10 +9,10 @@
   --ds-header-bg: #f8f4ec; // Header background color same as body
 }
 
-// Override the my-cs class to remove margin-top
+// Override the my-cs class to remove margin-top and margin-bottom
 .my-cs {
   margin-top: 0 !important; // Remove the margin-top
-  margin-bottom: var(--ds-content-spacing); // Keep margin-bottom
+  margin-bottom: 0 !important; // Remove the margin-bottom to eliminate space above footer
 }
 
 // Ensure the new background color is applied to all key areas
