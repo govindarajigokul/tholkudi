@@ -15,6 +15,51 @@
   margin-bottom: 0 !important; // Remove the margin-bottom to eliminate space above footer
 }
 
+// Remove default margins and padding that create unwanted space
+html, body {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+// Remove spacing between header and content
+.outer-wrapper, .inner-wrapper {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+// Remove any spacing from main content area
+main#main-content {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+// Remove spacing from header components
+ds-header-navbar-wrapper, ds-breadcrumbs, ds-navbar {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+// Completely hide and remove spacing from navbar
+#main-navbar, .navbar-container, nav.navbar {
+  margin: 0 !important;
+  padding: 0 !important;
+  height: 0 !important;
+  min-height: 0 !important;
+  display: none !important;
+}
+
+// Hide breadcrumbs completely on home page and remove any spacing
+ds-breadcrumbs {
+  display: none !important;
+}
+
+// Remove breadcrumb spacing
+.nav-breadcrumb, .breadcrumb {
+  margin: 0 !important;
+  padding: 0 !important;
+  display: none !important;
+}
+
 // Ensure the new background color is applied to all key areas
 html, body, main, app-root, ds-themed-page, ds-community-search, ds-home-news {
   background-color: #f8f4ec !important;
