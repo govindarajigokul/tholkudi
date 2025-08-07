@@ -498,7 +498,7 @@
   "bitstream-request-a-copy.submit.success": "உருப்படி கோரிக்கை வெற்றிகரமாக சமர்ப்பிக்கப்பட்டது.",
   "bitstream-request-a-copy.submit.error": "உருப்படி கோரிக்கையைச் சமர்ப்பிப்பதில் ஏதோ தவறு ஏற்பட்டுள்ளது.",
   "browse.back.all-results": "அனைத்து உலாவல் முடிவுகளும்",
-  "browse.comcol.by.author": "ஆசிரியர் மூலம்",
+  "browse.comcol.by.author": "ஆசிரியர்",
   "browse.comcol.by.media": "மீடியா மூலம்",
   "browse.comcol.by.language": "மொழி மூலம்",
   "browse.comcol.by.linguistictype": "மொழியியல் வகை மூலம்",
@@ -506,7 +506,7 @@
   "browse.comcol.by.subject": "பொருள் வாரியாக",
   "browse.comcol.by.srsc": "பொருள் வகைபடி",
   "browse.comcol.by.nsi": "நார்வேஜியன் அறிவியல் குறியீட்டின்படி",
-  "browse.comcol.by.title": "தலைப்பின்படி",
+  "browse.comcol.by.title": "நிகழ்வுகள்",
   "browse.comcol.head": "உலவ",
   "browse.empty": "காண்பிக்க எந்த பொருட்களும் இல்லை.",
   "browse.metadata.author": "ஆசிரியர்",
@@ -3546,5 +3546,6 @@
   "footer.address.line3": "செப்பாக்கம், சென்னை 600 005",
   "footer.phone": "தொலைபேசி",
   "footer.email": "மின்னஞ்சல்",
-  "footer.copyright.text": "பழங்குடியினர் நலத்துறை, தமிழ்நாடு அரசு. அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை."
+  "footer.copyright.text": "பழங்குடியினர் நலத்துறை, தமிழ்நாடு அரசு. அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.",
+  "header.about-us": "எங்களைப் பற்றி"
 }

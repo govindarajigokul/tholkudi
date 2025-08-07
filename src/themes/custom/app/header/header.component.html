@@ -14,9 +14,9 @@
         <div class="d-flex align-items-center me-3">
           <!-- About us Button (simple link) - NOW FIRST -->
           <a routerLink="/about-us" class="nav-button me-2"
-             aria-label="About Us"
+             [attr.aria-label]="'header.about-us' | translate"
              role="menuitem">
-            About Us
+            {{ 'header.about-us' | translate }}
           </a>
 
           <!-- Tamil Nadu Tribes Button (simple link) - NOW SECOND -->
