@@ -10,9 +10,10 @@
     <ds-header-navbar-wrapper></ds-header-navbar-wrapper>
     <ds-breadcrumbs></ds-breadcrumbs>
     <main class="my-cs" id="main-content">
-      <ds-loading *ngIf="shouldShowRouteLoader" class="ds-loading-overlay"></ds-loading>
       <router-outlet></router-outlet>
     </main>
+    <!-- Loading overlay positioned outside main to prevent layout shifts -->
+    <ds-loading *ngIf="shouldShowRouteLoader" class="ds-loading-overlay"></ds-loading>
     <ds-footer></ds-footer>
   </div>
 </div>
