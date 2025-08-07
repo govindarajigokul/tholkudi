@@ -1,10 +1,11 @@
 :host {
   footer {
-    background-color: #f8f4ec; // Match the site background color
+    background-color: #f1f1e9; // Updated footer background color
     color: #333;
     z-index: var(--ds-footer-z-index);
     border-top: 1px solid #ddd;
     padding: 2rem 0 1rem 0;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); // Add shadow to top of footer
 
     .container {
       max-width: 1200px;
@@ -118,7 +119,7 @@
 
     // Bottom copyright section
     .bottom-footer {
-      background-color: #f8f4ec; // Match the site background color
+      background-color: #f1f1e9; // Updated footer background color
       color: #666;
       font-size: 0.85rem;
       padding: 1rem 0 0.5rem 0;
