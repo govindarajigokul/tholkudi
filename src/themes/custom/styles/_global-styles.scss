@@ -39,13 +39,31 @@ ds-header-navbar-wrapper, ds-breadcrumbs, ds-navbar {
   padding: 0 !important;
 }
 
-// Completely hide and remove spacing from navbar
-#main-navbar, .navbar-container, nav.navbar {
+// Hide only the main DSpace navbar, not our custom header
+#main-navbar, .navbar-container {
   margin: 0 !important;
   padding: 0 !important;
   height: 0 !important;
   min-height: 0 !important;
   display: none !important;
+}
+
+// Hide default DSpace navbar but preserve our custom header navigation
+ds-header-navbar-wrapper nav.navbar,
+ds-navbar nav.navbar,
+.main-navbar nav.navbar {
+  margin: 0 !important;
+  padding: 0 !important;
+  height: 0 !important;
+  min-height: 0 !important;
+  display: none !important;
+}
+
+// Ensure our custom header nav remains visible
+header nav.navbar {
+  display: flex !important;
+  height: auto !important;
+  min-height: auto !important;
 }
 
 // Hide breadcrumbs completely on home page and remove any spacing
