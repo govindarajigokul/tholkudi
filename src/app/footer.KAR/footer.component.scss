@@ -32,6 +32,16 @@
       margin-bottom: 1rem;
       color: #8B4513;
       text-align: left;
+
+      // Style for the first word with brown underline
+      .first-word {
+        border-bottom: 3px solid #8B4513 !important; // Brown underline
+        padding-bottom: 3px !important; // Small space between text and underline
+        display: inline !important; // Keep it inline with the rest of the text
+        text-decoration: underline !important; // Fallback underline
+        text-decoration-color: #8B4513 !important; // Brown underline color
+        text-underline-offset: 3px !important; // Space between text and underline
+      }
     }
 
     // Content styling
@@ -148,3 +158,12 @@
   }
 }
 
+// Global override to ensure first-word styling is applied
+footer h5 .first-word {
+  border-bottom: 3px solid #8B4513 !important;
+  padding-bottom: 3px !important;
+  display: inline !important;
+  text-decoration: underline !important;
+  text-decoration-color: #8B4513 !important;
+  text-underline-offset: 3px !important;
+}

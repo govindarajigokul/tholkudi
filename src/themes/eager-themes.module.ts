@@ -16,4 +16,3 @@ import { EagerThemeModule as CustomEagerThemeModule } from './custom/eager-theme
   ],
 })
 export class EagerThemesModule {}
-
