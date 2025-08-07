@@ -1,0 +1,68 @@
+// Import the Akhand-Bold font
+@font-face {
+  font-family: 'Akhand-Bold';
+  src: url('../../../../../assets/fonts/Akhand-Bold-BF642a3156ce54d.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+// Browse-by component styling with Akhand-Bold font
+:host {
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Akhand-Bold', Arial, sans-serif;
+    font-weight: bold;
+    color: #2b4878;
+  }
+
+  // Browse navigation buttons
+  .btn, .btn-primary, .btn-secondary {
+    font-family: 'Akhand-Bold', Arial, sans-serif;
+    font-weight: bold;
+
+    &.btn-primary {
+      background-color: #2b4878;
+      border-color: #2b4878;
+
+      &:hover, &:focus {
+        background-color: #1e3456;
+        border-color: #1e3456;
+      }
+    }
+  }
+
+  // Pagination and sorting controls
+  .pagination {
+    .page-link {
+      font-family: 'Akhand-Bold', Arial, sans-serif;
+      font-weight: bold;
+      color: #2b4878;
+
+      &:hover, &:focus {
+        color: #1e3456;
+      }
+    }
+
+    .page-item.active .page-link {
+      background-color: #2b4878;
+      border-color: #2b4878;
+    }
+  }
+
+  // Sort dropdown
+  .form-control, .form-select {
+    font-family: 'Akhand-Bold', Arial, sans-serif;
+    font-weight: bold;
+    color: #2b4878;
+  }
+
+  // Browse entries/items
+  .list-group-item {
+    font-family: 'Akhand-Bold', Arial, sans-serif;
+
+    h5, .h5 {
+      font-family: 'Akhand-Bold', Arial, sans-serif;
+      font-weight: bold;
+      color: #2b4878;
+    }
+  }
+}

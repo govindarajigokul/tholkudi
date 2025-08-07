@@ -19,16 +19,17 @@
     height: 100%;
     object-fit: cover; // Ensure proper scaling while maintaining aspect ratio
     object-position: center; // Center the image
-    display: none;
     position: absolute;
     top: 0;
     left: 0;
+    opacity: 0;
     transition: opacity 0.8s ease-in-out;
+    z-index: 1;
   }
 
   img.active {
-    display: block;
-    z-index: 1;
+    opacity: 1;
+    z-index: 2;
   }
 
   button.carousel-prev,

@@ -1,0 +1,50 @@
+// Import the Akhand-Bold font
+@font-face {
+  font-family: 'Akhand-Bold';
+  src: url('../../../../../../assets/fonts/Akhand-Bold-BF642a3156ce54d.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+// Browse by metadata styling with Akhand-Bold font
+.comcol-page-browse-section {
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Akhand-Bold', Arial, sans-serif;
+    font-weight: bold;
+    color: #2b4878;
+  }
+
+  .browse-by-metadata {
+    font-family: 'Akhand-Bold', Arial, sans-serif;
+
+    // Browse title
+    .browse-title {
+      font-family: 'Akhand-Bold', Arial, sans-serif;
+      font-weight: bold;
+      color: #2b4878;
+    }
+
+    // Browse controls and buttons
+    .btn, .btn-primary, .btn-secondary {
+      font-family: 'Akhand-Bold', Arial, sans-serif;
+      font-weight: bold;
+
+      &.btn-primary {
+        background-color: #2b4878;
+        border-color: #2b4878;
+
+        &:hover, &:focus {
+          background-color: #1e3456;
+          border-color: #1e3456;
+        }
+      }
+    }
+
+    // Form controls
+    .form-control, .form-select {
+      font-family: 'Akhand-Bold', Arial, sans-serif;
+      font-weight: bold;
+      color: #2b4878;
+    }
+  }
+}
