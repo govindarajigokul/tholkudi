@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, ChangeDetectorRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -21,6 +21,8 @@ export class HomeNewsComponent implements OnInit, OnDestroy {
   currentIndex = 0;
   intervalId: any;
 
+  constructor(private cdr: ChangeDetectorRef) {}
+
   ngOnInit(): void {
     this.startAutoSlide();
   }
@@ -32,15 +34,17 @@ export class HomeNewsComponent implements OnInit, OnDestroy {
   }
 
   startAutoSlide(): void {
-    this.intervalId = setInterval(() => this.showNext(), 7000); // 7 seconds as requested
+    this.intervalId = setInterval(() => this.showNext(), 5000); // 5 seconds auto-slide
   }
 
   showNext(): void {
     this.currentIndex = (this.currentIndex + 1) % this.banners.length;
+    this.cdr.detectChanges(); // Ensure change detection runs
   }
 
   showPrevious(): void {
     this.currentIndex = (this.currentIndex - 1 + this.banners.length) % this.banners.length;
+    this.cdr.detectChanges(); // Ensure change detection runs
   }
 }
 
