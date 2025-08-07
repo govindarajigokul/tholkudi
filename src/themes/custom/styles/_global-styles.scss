@@ -24,3 +24,54 @@ html, body, main, app-root, ds-themed-page, ds-community-search, ds-home-news {
 header, #main-site-header {
   background-color: #f8f4ec !important;
 }
+
+// Import the Akhand-Bold font globally
+@font-face {
+  font-family: 'Akhand-Bold';
+  src: url('../../../assets/fonts/Akhand-Bold-BF642a3156ce54d.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+// Global styling for all browse category elements
+.comcol-browse-label,
+.comcol-browse .list-group-item,
+.browse-by-metadata h1,
+.browse-by-metadata h2,
+.browse-by-metadata h3,
+.browse-by-metadata h4,
+.browse-by-metadata h5,
+.browse-by-metadata h6,
+nav[aria-label*="Browse"] a,
+nav[aria-label*="Browse"] .list-group-item,
+.list-group-horizontal .list-group-item,
+[class*="browse"] .list-group-item,
+[class*="browse"] .nav-link,
+[class*="browse"] .btn {
+  font-family: 'Akhand-Bold', Arial, sans-serif !important;
+  font-weight: bold !important;
+}
+
+// Specific styling for browse category tabs
+.list-group-horizontal .list-group-item {
+  font-family: 'Akhand-Bold', Arial, sans-serif !important;
+  font-weight: bold !important;
+  font-size: 16px !important;
+  color: #2b4878 !important;
+
+  &:hover, &:focus, &.active {
+    background-color: #2b4878 !important;
+    color: white !important;
+    border-color: #2b4878 !important;
+  }
+}
+
+// Browse section headings
+h1, h2, h3, h4, h5, h6 {
+  &[class*="browse"],
+  &.comcol-browse-label {
+    font-family: 'Akhand-Bold', Arial, sans-serif !important;
+    font-weight: bold !important;
+    color: #2b4878 !important;
+  }
+}
