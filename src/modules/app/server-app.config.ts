@@ -20,6 +20,7 @@ import {
   StoreModule,
 } from '@ngrx/store';
 import {
+  MissingTranslationHandler,
   TranslateLoader,
   TranslateModule,
 } from '@ngx-translate/core';
@@ -54,6 +55,7 @@ import { ServerXSRFService } from '../../app/core/xsrf/server-xsrf.service';
 import { XSRFService } from '../../app/core/xsrf/xsrf.service';
 import { AngularticsProviderMock } from '../../app/shared/mocks/angulartics-provider.service.mock';
 import { Angulartics2Mock } from '../../app/shared/mocks/angulartics2.service.mock';
+import { MissingTranslationHelper } from '../../app/shared/translate/missing-translation.helper';
 import { Angulartics2DSpace } from '../../app/statistics/angulartics/dspace-provider';
 import { ServerSubmissionService } from '../../app/submission/server-submission.service';
 import { SubmissionService } from '../../app/submission/submission.service';
@@ -78,6 +80,8 @@ export const serverAppConfig: ApplicationConfig = mergeApplicationConfig({
           useFactory: (createTranslateLoader),
           deps: [TransferState],
         },
+        missingTranslationHandler: { provide: MissingTranslationHandler, useClass: MissingTranslationHelper },
+        useDefaultLang: true,
       }),
     ),
     ...ServerInitService.providers(),

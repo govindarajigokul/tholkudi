@@ -192,7 +192,7 @@ export abstract class InitService {
     );
 
     // Load the default language from the config file
-    // translate.setDefaultLang(environment.defaultLanguage);
+    this.translate.setDefaultLang(environment.defaultLanguage);
 
     this.localeService.setCurrentLanguageCode();
   }
